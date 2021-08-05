@@ -1,0 +1,31 @@
+// utils
+@import'./utils/variables';
+@import'./utils/functions';
+@import'./utils/mixins';
+@import'./utils/vendors.scss';
+@import './utils/responsive';
+
+// shared
+@import './shared/titles';
+@import './shared/descriptions';
+
+// base
+@import './base/fonts';
+@import './base/reset';
+@import './base/base';
+
+
+// components
+
+// layout
+@import './layout/footer';
+@import './layout/navigation';
+
+
+// pages
+@import './pages/home/home';
+@import './pages/home/hero';
+@import './pages/home/history';
+@import './pages/home/news';
+@import './pages/home/recruit';
+@import './pages/home/teams';
