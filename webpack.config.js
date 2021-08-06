@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.[contenthash].js',
+    filename: 'bundle.js',
     clean: true
   },
 
@@ -52,14 +52,8 @@ module.exports = {
       ]
     }),
 
-    new HtmlWebpackPlugin({
-      template: './views/index.html',
-      inject: 'body',
-      scriptLoading: 'blocking'
-    }),
-
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
+      filename: '[name].css',
       chunkFilename: '[id].css'
     })
   ],
