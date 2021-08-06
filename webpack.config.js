@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default
 
 const dirApp = path.join(__dirname, 'app')
 const dirShared = path.join(__dirname, 'shared')
@@ -49,13 +50,16 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './index.html',
-      inject: 'head',
+      inject: 'body',
+      scriptLoading: 'blocking'
     }),
 
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].css'
-    })
+    }),
+
+    new HTMLInlineCSSWebpackPlugin()
   ],
 
   module: {
