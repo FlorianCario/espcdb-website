@@ -10,6 +10,7 @@ module.exports = merge(config, {
     writeToDisk: true
   },
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   }
 })
