@@ -99,11 +99,10 @@ module.exports = {
       },
 
       {
-        test: /\.(woff(2)?)$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: 'fonts/',
-          name: '[name].[ext]'
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
         }
       }
 

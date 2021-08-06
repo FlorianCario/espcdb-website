@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: $font-dharma-gothic;
-  src: local('Dharma Gothic E Bold'), local('DharmaGothicE-Bold'),
+  src:
     url('../fonts/DharmaGothicE-Bold.woff2') format('woff2'),
     url('../fonts/DharmaGothicE-Bold.woff') format('woff');
   font-weight: bold;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: $font-dharma-gothic;
-  src: local('Dharma Gothic E Regular'), local('DharmaGothicE-Regular'),
+  src:
     url('../fonts/DharmaGothicE-Regular.woff2') format('woff2'),
     url('../fonts/DharmaGothicE-Regular.woff') format('woff');
   font-weight: normal;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: $font-optician-sans;
-  src: local('Optician Sans Regular'), local('OpticianSans-Regular'),
+  src:
     url('../fonts/OpticianSans-Regular.woff2') format('woff2'),
     url('../fonts/OpticianSans-Regular.woff') format('woff');
   font-weight: 300;
@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: $font-silka;
-  src: local('Silka Light'), local('Silka-Light'),
+  src:
     url('../fonts/Silka-Light.woff2') format('woff2'),
     url('../fonts/Silka-Light.woff') format('woff');
   font-weight: 300;
@@ -49,7 +49,7 @@
 
 @font-face {
   font-family: $font-silka;
-  src: local('Silka Regular'), local('Silka-Regular'),
+  src:
     url('../fonts/Silka-Regular.woff2') format('woff2'),
     url('../fonts/Silka-Regular.woff') format('woff');
   font-weight: normal;
