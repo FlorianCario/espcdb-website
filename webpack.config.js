@@ -94,7 +94,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg|webp)$/,
         type: 'asset/resource',
         generator: {
-          filename: './assets/[hash][ext]'
+          filename: 'assets/[hash][ext]'
         }
       },
 
