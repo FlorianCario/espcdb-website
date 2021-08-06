@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     clean: true
   },
 
@@ -59,7 +59,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[hash].css',
       chunkFilename: '[id].css'
     })
   ],
@@ -96,12 +96,10 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|fnt|webp)$/,
-        loader: 'file-loader',
-        options: {
-          name(file) {
-            return '[hash].[ext]'
-          }
+        test: /\.(jpe?g|png|gif|svg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: './assets/[contenthash][ext]'
         }
       },
 
@@ -109,7 +107,8 @@ module.exports = {
         test: /\.(woff(2)?)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          outputPath: 'fonts/',
+          name: './fonts/[name].[ext]'
         }
       }
 
