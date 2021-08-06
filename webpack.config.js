@@ -52,6 +52,12 @@ module.exports = {
       ]
     }),
 
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body',
+      scriptLoading: 'blocking'
+    }),
+
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -90,10 +96,12 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|webp)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: './assets/[name][ext]'
+        test: /\.(jpe?g|png|gif|svg|fnt|webp)$/,
+        loader: 'file-loader',
+        options: {
+          name(file) {
+            return '[hash].[ext]'
+          }
         }
       },
 
@@ -101,8 +109,7 @@ module.exports = {
         test: /\.(woff(2)?)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'fonts/',
-          name: './fonts/[name].[ext]'
+          name: '[name].[ext]'
         }
       }
 
