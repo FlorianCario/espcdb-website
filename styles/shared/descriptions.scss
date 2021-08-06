@@ -1,11 +1,44 @@
+%description-10 {
+  font-family: $font-optician-sans;
+  font-size: 1rem;
+  line-height: 84.5%;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+
 %description-12 {
+  font-family: $font-optician-sans;
   font-size: 1.2rem;
+  line-height: 93.5%;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
 }
 
 %description-14 {
+  font-family: $font-optician-sans;
   font-size: 1.4rem;
+  letter-spacing: -.01em;
 }
 
-%description-16 {
-  font-size: 1.6rem;
+%description-15 {
+  font-family: $font-silka;
+  font-size: 1.5rem !important;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -.01em;
+}
+
+%description-45 {
+  font-family: $font-silka;
+  font-size: 4.5rem;
+  line-height: 114.5%;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+
+%description-55 {
+  font-family: $font-silka;
+  font-size: 5.5rem;
+  line-height: 126.5%;
+  letter-spacing: -.01em;
 }

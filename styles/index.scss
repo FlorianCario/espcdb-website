@@ -8,6 +8,7 @@
 // shared
 @import './shared/titles';
 @import './shared/descriptions';
+@import './shared/pages';
 
 // base
 @import './base/fonts';
@@ -16,8 +17,10 @@
 
 
 // components
+@import './components/cta';
 
 // layout
+@import './layout/container';
 @import './layout/footer';
 @import './layout/navigation';
 

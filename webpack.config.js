@@ -53,7 +53,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './views/index.pug',
+      template: './views/index.html',
       inject: 'body',
       scriptLoading: 'blocking'
     }),
@@ -67,8 +67,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pug$/,
-        use: ['pug-loader']
+        test: /\.html$/,
+        use: [
+          'html-loader'
+        ]
       },
       {
         test: /\.js$/,
@@ -95,9 +97,9 @@ module.exports = {
 
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[hash].[ext]'
+        type: 'asset/resource',
+        generator: {
+          filename: './assets/[name][ext]'
         }
       },
 
@@ -105,8 +107,8 @@ module.exports = {
         test: /\.(woff(2)?)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'fonts',
-          name: '[name].[ext]'
+          outputPath: 'fonts/',
+          name: './fonts/[name].[ext]'
         }
       }
 

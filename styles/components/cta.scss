@@ -1,0 +1,31 @@
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.cta {
+  @extend %description-12;
+  color: $color-beige;
+  position: relative;
+}
+
+.cta__icon:after {
+  content: url('../assets/plus.svg');
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  top: -.2rem;
+  margin-left: 1.4rem;
+  transition: transform 1.5s $ease-out-expo;
+  transform-origin: 50% 50%;
+}
+
+.cta__icon:hover:after {
+  transform: rotate(180deg);
+}

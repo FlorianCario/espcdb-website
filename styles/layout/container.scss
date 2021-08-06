@@ -1,0 +1,7 @@
+.l-container {
+  margin: 0 15rem;
+
+  @include media("<phone") {
+    margin: 0 2rem;
+  }
+}
