@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.[contenthash].js',
+    filename: 'bundle.js',
     clean: true
   },
 
@@ -59,7 +59,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
+      filename: '[name].css',
       chunkFilename: '[id].css'
     })
   ],
@@ -108,7 +108,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'fonts/',
-          name: './fonts/[name].[ext]'
+          name: '[name].[ext]'
         }
       }
 
