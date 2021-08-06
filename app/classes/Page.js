@@ -35,15 +35,20 @@ export default class Page {
   }
 
   createAnimations() {
+    this.animations = []
+
+    // titles
     this.animationsTitles = map(this.elements.animationsTitles, element => {
       return new Title({
         element
       })
     })
+
+    this.animations.push(...this.animationsTitles)
   }
 
   onResize() {
-    each(this.animationsTitles, animation => {
+    each(this.animations, animation => {
       animation.onResize()
     })
   }

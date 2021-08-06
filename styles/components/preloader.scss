@@ -1,0 +1,15 @@
+.preloader {
+  @extend %cover;
+  position: fixed;
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999;
+  display: none;
+}
+
+.preloader__logo {
+  width: 10rem;
+  height: 10rem;
+}

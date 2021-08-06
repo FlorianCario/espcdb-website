@@ -21,18 +21,20 @@ export default class Title extends Animation {
   }
 
   animateIn() {
-    GSAP.set(this.element, {
+
+    this.timelineIn = GSAP.timeline({ delay: .5 })
+    this.timelineIn.set(this.element, {
       autoAlpha: 1
     })
     each(this.elementLines, (line, index) => {
-      GSAP.fromTo(line, {
+      this.timelineIn.fromTo(line, {
         yPercent: 100
       }, {
         yPercent: 0,
-        delay: 0.5 + index * 0.2,
+        delay: index * 0.2,
         duration: 2,
         ease: 'expo.out',
-      })
+      }, 0)
     })
   }
   animateOut() {

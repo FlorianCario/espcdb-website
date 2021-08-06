@@ -49,7 +49,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './index.html',
-      inject: 'body',
+      inject: 'head',
     }),
 
     new MiniCssExtractPlugin({
@@ -66,12 +66,7 @@ module.exports = {
           'html-loader'
         ]
       },
-      {
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
+
 
       {
         test: /\.(sa|sc|c)ss$/,
@@ -90,10 +85,17 @@ module.exports = {
       },
 
       {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+
+      {
         test: /\.(jpe?g|png|gif|svg|webp)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/[hash][ext]'
+          filename: 'assets/[name][ext]'
         }
       },
 
