@@ -9,7 +9,7 @@ module.exports = merge(config, {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/espcdb-website'
+    publicPath: '/espcdb-website/'
   },
 
   plugins: [
