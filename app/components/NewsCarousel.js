@@ -64,7 +64,7 @@ export default class NewsCarousel extends Component {
     if (!this.isDragging) return
 
     if (e.type === 'touchmove') {
-      this.currentX = this.offX + ((e.touches[0].pageX - this.onX))
+      this.currentX = this.offX + ((e.touches[0].pageX - this.onX) * this.opts.speed)
     } else if (e.type == 'mousemove') {
       this.currentX = this.offX + ((e.clientX - this.onX) * this.opts.speed)
     }
