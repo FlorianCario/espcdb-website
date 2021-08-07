@@ -20,6 +20,10 @@
   line-height: 93.5%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+
+  @include media('<phone') {
+    font-size: 6.4rem;
+  }
 }
 
 %title-120 {

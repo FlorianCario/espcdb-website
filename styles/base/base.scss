@@ -13,6 +13,7 @@ body {
   @extend %description-15;
   color: $color-black;
   font-family: $font-silka;
+  overflow-x: hidden;
 }
 
 a {
@@ -29,5 +30,6 @@ img {
     display: inline-block;
     overflow: hidden;
     vertical-align: top;
+    font-size: inherit;
   }
 }

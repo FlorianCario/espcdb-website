@@ -1,4 +1,4 @@
-import Component from 'classes/component'
+import Component from 'classes/Component'
 
 export default class Animation extends Component {
   constructor({ element, elements }) {

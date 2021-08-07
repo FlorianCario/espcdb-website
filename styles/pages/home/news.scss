@@ -1,0 +1,169 @@
+.home__news {
+  position: relative;
+  padding-top: 19.8rem;
+}
+
+.home__news__upper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.home__news__titleContainer {
+  position: relative;
+}
+
+.home__news__title {
+  @extend %title-100;
+  color: $color-green;
+  max-width: 40rem;
+}
+
+.home__news__circle {
+  position: absolute;
+  left: -3rem;
+  bottom: -2rem;
+
+  svg {
+    width: 35rem;
+    height: 13.4rem;
+  }
+
+  @include media('<phone') {
+    left: 0rem;
+    bottom: 0rem;
+    svg {
+      width: 19.1rem;
+      height: 7.3rem;
+    }
+  }
+}
+
+.home__news__controlsContainer {
+  align-self: flex-end;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @include media('<phone') {
+    margin-bottom: 2rem;
+  }
+}
+
+.home__news__slider--prev {
+  margin-right: 2.6rem;
+}
+
+.home__news__slider {
+  position: relative;
+  cursor: grab;
+  width: auto;
+  overflow-x: hidden;
+
+  &.is-grabbing {
+    cursor: grabbing;
+  }
+}
+
+.home__news__sliderInner{
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  margin-top: 12.5rem;
+  margin-bottom: 13.6rem;
+  left: 25%;
+
+  @include media('<phone') {
+    left: 4%;
+  }
+}
+
+.home__news__slide{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 65.5rem;
+  margin-right: 12.1rem;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+
+  @include media('<phone') {
+    width: 31.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+.home__news__imageContainer{
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  max-width: 65.5rem;
+  max-height: 38.3rem;
+  margin: 0;
+  display: block;
+
+  @include media('<phone') {
+    height: 40vh;
+  }
+}
+
+.home__news__slideImage{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home__news__textContainer{
+  margin-top: 3.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__news__subhead{
+  display: flex;
+  align-items: center;
+}
+
+.home__news__cat{
+  @extend %title-16;
+  color: $color-beige;
+}
+
+.home__news__line{
+  width: 23px;
+  height: 1px;
+  background-color: $color-black;
+  margin: 0 .9rem;
+}
+
+.home__news__date{
+  @extend %title-16;
+  color: $color-black;
+}
+
+.home__news__content{
+  @extend %description-15;
+  margin-top: 1.2rem;
+  max-width: 36.4rem;
+
+  @include media('<phone') {
+    max-width: 26.7rem;
+  }
+}
+
+.home__news__background {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 64.2rem;
+  margin-top: 19.2rem;
+  background-color: $color-light-grey;
+}

@@ -1,4 +1,4 @@
-import Component from 'classes/component'
+import Component from 'classes/Component'
 import gsap from 'gsap'
 
 export default class HomeSlider extends Component {

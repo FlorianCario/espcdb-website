@@ -1,18 +1,23 @@
 import each from 'lodash/each'
-import HomeSlider from 'components/homeSlider'
+import HomeSlider from 'components/HomeSlider'
+import NewsCarousel from 'components/NewsCarousel'
 import Home from 'pages/home'
 
 class App {
   constructor() {
     this.createPages()
-    this.createHomeSlider()
+    this.createComponents()
+
 
     this.onResize()
   }
 
-  createHomeSlider() {
+  createComponents() {
     this.homeSlider = new HomeSlider()
+    this.newsSlider = new NewsCarousel()
   }
+
+
 
   createPages() {
     this.pages = {
