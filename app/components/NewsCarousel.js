@@ -14,11 +14,6 @@ export default class NewsCarousel extends Component {
       }
     })
 
-    this.slidesNumb = this.elements.slides.length;
-    each(this.elements.images, image => {
-      image.setAttribute('draggable', false)
-    })
-
     this.opts = {
       el: options.el || '.js-news__slider',
       ease: options.ease || 0.1,
@@ -38,6 +33,8 @@ export default class NewsCarousel extends Component {
     this.max = 0
 
     this.centerX = window.innerWidth / 2
+
+    this.slidesNumb = this.elements.slides.length;
 
     this.bind()
     this.init()
@@ -79,7 +76,7 @@ export default class NewsCarousel extends Component {
     const acc = sd / window.innerWidth
     let velo = + acc
 
-    this.elements.sliderInner.style.transform = `translateX(${this.lastX}px) skewX(${velo * this.opts.velocity}deg)`
+    this.elements.sliderInner.style.transform = `translate3D(${this.lastX}px, 0, 0) skewX(${velo * this.opts.velocity}deg)`
 
     window.requestAnimationFrame(this.run)
   }

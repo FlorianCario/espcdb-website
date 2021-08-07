@@ -1,7 +1,12 @@
 import each from 'lodash/each'
+
+// pages
+import Home from 'pages/home'
+
+// Components
 import HomeSlider from 'components/HomeSlider'
 import NewsCarousel from 'components/NewsCarousel'
-import Home from 'pages/home'
+
 
 class App {
   constructor() {

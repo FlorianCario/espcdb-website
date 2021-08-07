@@ -12,25 +12,21 @@ export default class Title extends Animation {
       append: true
     })
 
-    split({
-      element: this.element,
-      append: true
-    })
-
-    this.elementLinesSpans = this.element.querySelectorAll('span span')
+    this.elementLinesSpans = this.element.querySelectorAll('span')
   }
 
   animateIn() {
-
     this.timelineIn = GSAP.timeline({ delay: .5 })
     this.timelineIn.set(this.element, {
       autoAlpha: 1
     })
     each(this.elementLines, (line, index) => {
       this.timelineIn.fromTo(line, {
-        yPercent: 100
+        autoAlpha: 0,
+        x: 100
       }, {
-        yPercent: 0,
+        autoAlpha: 1,
+        x: 0,
         delay: index * 0.2,
         duration: 2,
         ease: 'expo.out',

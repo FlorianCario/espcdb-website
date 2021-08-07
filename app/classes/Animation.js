@@ -13,6 +13,7 @@ export default class Animation extends Component {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.animateIn()
+          this.observer.unobserve(entry.target)
         } else {
           this.animateOut()
         }
