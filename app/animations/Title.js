@@ -23,7 +23,7 @@ export default class Title extends Animation {
     each(this.elementLines, (line, index) => {
       this.timelineIn.fromTo(line, {
         autoAlpha: 0,
-        x: 100
+        x: 100,
       }, {
         autoAlpha: 1,
         x: 0,

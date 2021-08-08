@@ -9,11 +9,19 @@ html {
   }
 }
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+.wf-loading body {
+  visibility: hidden;
+}
+
+.wf-active body {
   @extend %description-15;
+  visibility: visible;
   color: $color-black;
   font-family: $font-silka;
-  overflow-x: hidden;
 }
 
 a {
@@ -30,5 +38,6 @@ img {
     display: inline-block;
     vertical-align: top;
     font-size: inherit;
+    will-change: transform;
   }
 }

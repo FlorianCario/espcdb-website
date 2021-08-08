@@ -1,4 +1,5 @@
 import each from 'lodash/each'
+import Webfont from 'webfontloader'
 
 // pages
 import Home from 'pages/home'
@@ -10,6 +11,7 @@ import NewsCarousel from 'components/NewsCarousel'
 
 class App {
   constructor() {
+    this.loadFonts()
     this.createPages()
     this.createComponents()
 
@@ -22,7 +24,13 @@ class App {
     this.newsSlider = new NewsCarousel()
   }
 
-
+  loadFonts() {
+    Webfont.load({
+      custom: {
+        families: ['Dharma Gothic', 'Optician Sans', 'Silka']
+      }
+    })
+  }
 
   createPages() {
     this.pages = {

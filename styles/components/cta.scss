@@ -29,3 +29,9 @@ button {
 .cta__icon:hover:after {
   transform: rotate(180deg);
 }
+
+.cta__button {
+  padding: 1.6rem 4rem 1.6rem 1.6rem;
+  background-color: $color-beige;
+  color: $color-white;
+}
