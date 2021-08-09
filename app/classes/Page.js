@@ -2,6 +2,7 @@ import each from 'lodash/each'
 import map from 'lodash/map'
 
 import Title from 'animations/Title'
+import Paragraph from 'animations/Paragraph'
 
 
 export default class Page {
@@ -9,6 +10,7 @@ export default class Page {
     this.selector = element
     this.selectorChildren = {
       animationsTitles: '[data-animation="title"]',
+      animationsParagraphs: '[data-animation="paragraph"]',
       ...elements,
     }
     this.id = id
@@ -43,8 +45,16 @@ export default class Page {
         element
       })
     })
-
     this.animations.push(...this.animationsTitles)
+
+    // paragraphs
+    this.animationsParagraphs = map(this.elements.animationsParagraphs, element => {
+      return new Paragraph({
+        element
+      })
+    })
+    this.animations.push(...this.animationsParagraphs)
+
   }
 
   onResize() {

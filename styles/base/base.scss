@@ -41,3 +41,13 @@ img {
     will-change: transform;
   }
 }
+
+[data-animation="paragraph"] {
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    font-size: inherit;
+    will-change: transform;
+  }
+}
