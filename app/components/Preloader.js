@@ -31,12 +31,17 @@ export default class HomeSlider extends Component {
   animateOut() {
     this.tlPreloader = gsap.timeline({ defaults: { delay: 2 } })
 
-    this.tlPreloader.fromTo(this.element, {
+    this.tlPreloader.fromTo([this.elements.logo, this.elements.percentage], {
       autoAlpha: 1
     }, {
       autoAlpha: 0,
       duration: .5,
-    })
+    }).to(this.element, {
+      scaleY: 0,
+      transformOrigin: 'top center',
+      duration: 1.3,
+      ease: 'expo.out'
+    }, '-=1.5')
   }
 
   progress(instance, image) {
@@ -49,7 +54,6 @@ export default class HomeSlider extends Component {
 
       this.elements.percentage.innerHTML = this.percentage
 
-      console.log(this.elements.percentage);
     }
   }
 }
