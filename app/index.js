@@ -16,7 +16,6 @@ class App {
     this.createPages()
     this.createComponents()
 
-
     this.onResize()
   }
 
@@ -52,4 +51,7 @@ class App {
   }
 }
 
-new App()
+window.addEventListener('load', _ => {
+  new App
+})
+

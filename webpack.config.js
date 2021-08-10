@@ -51,15 +51,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'body',
-      scriptLoading: 'blocking'
+      scriptLoading: 'defer'
     }),
 
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].css'
     }),
-
-    new HTMLInlineCSSWebpackPlugin()
   ],
 
   module: {
