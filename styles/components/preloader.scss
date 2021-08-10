@@ -19,5 +19,11 @@
   color: $color-green;
   bottom: -4rem;
   right: 20rem;
+
+  @include media('<phone') {
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 

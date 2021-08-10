@@ -12,18 +12,21 @@ export default class Title extends Animation {
       append: true
     })
 
+    this.isRightAligned = false
+
     this.elementLinesSpans = this.element.querySelectorAll('span')
+    if (this.element.dataset.align) {
+      this.isRightAligned = true
+    }
   }
 
   animateIn() {
     this.timelineIn = GSAP.timeline({ delay: .5 })
-    this.timelineIn.set(this.element, {
-      autoAlpha: 1
-    })
+
     each(this.elementLines, (line, index) => {
       this.timelineIn.fromTo(line, {
         autoAlpha: 0,
-        x: 100,
+        x: this.isRightAligned ? -100 : 100,
       }, {
         autoAlpha: 1,
         x: 0,
@@ -35,9 +38,6 @@ export default class Title extends Animation {
   }
   animateOut() {
 
-    GSAP.set(this.element, {
-      autoAlpha: 0,
-    })
   }
 
   onResize() {

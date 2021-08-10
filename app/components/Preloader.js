@@ -29,6 +29,7 @@ export default class HomeSlider extends Component {
   }
 
   animateOut() {
+    document.body.classList.remove('is-loading')
     this.tlPreloader = gsap.timeline({ defaults: { delay: 2 } })
 
     this.tlPreloader.fromTo([this.elements.logo, this.elements.percentage], {
@@ -42,6 +43,9 @@ export default class HomeSlider extends Component {
       duration: 1.3,
       ease: 'expo.out'
     }, '-=1.5')
+      .set(this.element, {
+        autoAlpha: 0
+      }, '-=1')
   }
 
   progress(instance, image) {

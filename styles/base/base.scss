@@ -26,6 +26,10 @@ html {
   height: 100%;
 }
 
+body.is-loading {
+  cursor: wait;
+}
+
 a {
   text-decoration: none;
   color: inherit;

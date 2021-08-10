@@ -21,7 +21,7 @@ export default class Paragraph extends Animation {
   }
 
   animateIn() {
-    this.timelineIn = GSAP.timeline({ delay: .1 })
+    this.timelineIn = GSAP.timeline({ delay: .2 })
     this.timelineIn.set(this.element, {
       autoAlpha: 1
     })
@@ -30,8 +30,7 @@ export default class Paragraph extends Animation {
         yPercent: 100,
       }, {
         yPercent: 0,
-        delay: index * 0.1,
-        duration: 1,
+        duration: 1.5,
         ease: 'expo.out',
       }, 0)
     })
