@@ -30,6 +30,7 @@
     "gsap": "^3.7.1",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "imagesloaded": "^4.1.4",
     "include-media": "^1.4.10",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.2.0",

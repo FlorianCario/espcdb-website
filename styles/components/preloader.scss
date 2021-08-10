@@ -1,15 +1,22 @@
 .preloader {
   @extend %cover;
   position: fixed;
-  background-color: $color-green;
+  background-color: $color-white;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 99999999;
-  display: none;
 }
 
 .preloader__logo {
   width: 10rem;
   height: 10rem;
+}
+
+.preloader__percentage {
+  @extend %title-210;
+  position: absolute;
+  color: $color-green;
+  bottom: -4rem;
+  right: 20rem;
 }

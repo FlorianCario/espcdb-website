@@ -3,6 +3,7 @@ html {
   background-color: $color-white;
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+  height: 100%;
 
   @include media('<phone') {
     font-size: calc(100vw / 375 * 10);
@@ -22,6 +23,7 @@ html {
   visibility: visible;
   color: $color-black;
   font-family: $font-silka;
+  height: 100%;
 }
 
 a {

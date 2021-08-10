@@ -7,6 +7,7 @@ import Home from 'pages/home'
 // Components
 import HomeSlider from 'components/HomeSlider'
 import NewsCarousel from 'components/NewsCarousel'
+import Preloader from 'components/Preloader'
 
 
 class App {
@@ -22,6 +23,7 @@ class App {
   createComponents() {
     this.homeSlider = new HomeSlider()
     this.newsSlider = new NewsCarousel()
+    this.preloader = new Preloader()
   }
 
   loadFonts() {
