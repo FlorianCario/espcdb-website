@@ -8,7 +8,6 @@ export default class HomeSlider extends Component {
       element: '.preloader',
       elements: {
         logo: '.preloader__logo',
-        percentage: '.preloader__percentage'
       }
     })
 
@@ -19,12 +18,11 @@ export default class HomeSlider extends Component {
   }
 
   bind() {
-    ['preloadImages', 'animateOut', 'progress'].forEach((fn) => this[fn] = this[fn].bind(this))
+    ['preloadImages', 'animateOut'].forEach((fn) => this[fn] = this[fn].bind(this))
   }
 
   preloadImages() {
     this.imgLoaded = imagesLoaded(document.querySelectorAll('img'))
-    this.imgLoaded.on('progress', this.progress)
     this.imgLoaded.on('done', this.animateOut)
   }
 
@@ -32,7 +30,7 @@ export default class HomeSlider extends Component {
     document.body.classList.remove('is-loading')
     this.tlPreloader = gsap.timeline({ defaults: { delay: 2 } })
 
-    this.tlPreloader.fromTo([this.elements.logo, this.elements.percentage], {
+    this.tlPreloader.fromTo(this.elements.logo, {
       autoAlpha: 1
     }, {
       autoAlpha: 0,
@@ -42,23 +40,10 @@ export default class HomeSlider extends Component {
       transformOrigin: 'top center',
       duration: 1.3,
       ease: 'expo.out'
-    }, '-=1.5')
+    }, '-=1.6')
       .set(this.element, {
         autoAlpha: 0
       }, '-=1')
-  }
-
-  progress(instance, image) {
-    if (image.isLoaded) {
-      image.img.classList.add('is-loaded')
-
-      this.loadedImages = document.querySelectorAll('img.is-loaded').length
-
-      this.percentage = Math.round((this.loadedImages / this.totalImages) * 100)
-
-      this.elements.percentage.innerHTML = this.percentage
-
-    }
   }
 }
 
