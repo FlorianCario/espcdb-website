@@ -1,17 +1,19 @@
-import each from 'lodash/each'
 import Webfont from 'webfontloader'
 
 // pages
 import Home from 'pages/home'
+import Documents from 'pages/documents'
+import Actualites from 'pages/actualites'
+import Boutique from 'pages/boutique'
+import Contact from 'pages/contact'
+import Convocations from 'pages/convocations'
+import Partenaires from 'pages/partenaires'
 
-// Components
-import HomeSlider from 'components/HomeSlider'
-import NewsCarousel from 'components/NewsCarousel'
-import Preloader from 'components/Preloader'
 
 
 class App {
   constructor() {
+    this.template = window.location.pathname
     this.loadFonts()
     this.createPages()
     this.createComponents()
@@ -20,9 +22,7 @@ class App {
   }
 
   createComponents() {
-    this.homeSlider = new HomeSlider()
-    this.newsSlider = new NewsCarousel()
-    this.preloader = new Preloader()
+
   }
 
   loadFonts() {
@@ -34,14 +34,26 @@ class App {
   }
 
   createPages() {
-    this.pages = {
-      home: new Home()
-    }
+    this.home = new Home()
+    this.documents = new Documents()
+    this.actualites = new Actualites()
+    this.boutique = new Boutique()
+    this.contact = new Contact()
+    this.convocations = new Convocations()
+    this.partenaires = new Partenaires()
 
-    each(this.pages, page => {
-      this.page = page
-      this.page.create()
-    })
+    this.pages = {
+      '/': this.home,
+      '/documents': this.documents,
+      '/actualites': this.actualites,
+      '/boutique': this.boutique,
+      '/contact': this.contact,
+      '/convocations': this.convocations,
+      '/partenaires': this.partenaires
+    }
+    this.page = this.pages[this.template]
+    console.log(this.page);
+    this.page.create()
   }
 
   onResize() {
@@ -52,6 +64,6 @@ class App {
 }
 
 window.addEventListener('load', _ => {
-  new App
+  new App()
 })
 

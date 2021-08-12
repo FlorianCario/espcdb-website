@@ -54,7 +54,6 @@ export default class Page {
       })
     })
     this.animations.push(...this.animationsParagraphs)
-
   }
 
   onResize() {

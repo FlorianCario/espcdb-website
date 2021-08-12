@@ -9,7 +9,24 @@ const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').def
 const dirApp = path.join(__dirname, 'app')
 const dirShared = path.join(__dirname, 'shared')
 const dirStyles = path.join(__dirname, 'styles')
+const dirPages = path.join(__dirname, 'views/pages')
 const dirNode = 'node_modules'
+
+const notHomePages = [
+  'boutique/index',
+  'contact/index',
+  'convocations/index',
+  'documents/index',
+  'partenaires/index',
+  'actualites/index'
+]
+
+const mapFolders = notHomePages.map(filename => {
+  return new HtmlWebpackPlugin({
+    filename: `${filename}.html`,
+    template: path.join(dirPages, `${filename}.html`)
+  })
+})
 
 module.exports = {
 
@@ -34,10 +51,17 @@ module.exports = {
   },
 
   devServer: {
-    hot: true
+    hot: true,
   },
 
   plugins: [
+
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: 'body'
+    }),
+
+    ...mapFolders,
 
     new CopyWebpackPlugin({
       patterns: [
@@ -46,12 +70,6 @@ module.exports = {
           to: ''
         }
       ]
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      inject: 'body',
-      scriptLoading: 'defer'
     }),
 
     new MiniCssExtractPlugin({
