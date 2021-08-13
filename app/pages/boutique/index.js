@@ -4,7 +4,7 @@ export default class Boutique extends Page {
   constructor() {
     super({
       id: 'boutique',
-      element: '.boutique',
+      element: '#b',
     })
   }
 

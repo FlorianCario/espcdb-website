@@ -13,16 +13,16 @@ import Partenaires from 'pages/partenaires'
 
 class App {
   constructor() {
-    this.template = window.location.pathname
     this.loadFonts()
+    this.createContent()
     this.createPages()
-    this.createComponents()
 
     this.onResize()
   }
 
-  createComponents() {
-
+  createContent() {
+    this.content = document.querySelector('.page')
+    this.template = this.content.getAttribute('data-template')
   }
 
   loadFonts() {
@@ -34,25 +34,18 @@ class App {
   }
 
   createPages() {
-    this.home = new Home()
-    this.documents = new Documents()
-    this.actualites = new Actualites()
-    this.boutique = new Boutique()
-    this.contact = new Contact()
-    this.convocations = new Convocations()
-    this.partenaires = new Partenaires()
 
     this.pages = {
-      '/espcdb-website/': this.home,
-      '/espcdb-website/documents': this.documents,
-      '/espcdb-website/actualites': this.actualites,
-      '/espcdb-website/boutique': this.boutique,
-      '/espcdb-website/contact': this.contact,
-      '/espcdb-website/convocations': this.convocations,
-      '/espcdb-website/partenaires': this.partenaires,
+      home: new Home(),
+      documents: new Documents(),
+      actualites: new Actualites(),
+      boutique: new Boutique(),
+      contact: new Contact(),
+      convocations: new Convocations(),
+      partenaires: new Partenaires()
     }
     this.page = this.pages[this.template]
-    console.log(this.template);
+    console.log(this.page);
     this.page.create()
   }
 

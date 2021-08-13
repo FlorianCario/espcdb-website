@@ -4,7 +4,7 @@ export default class Documents extends Page {
   constructor() {
     super({
       id: 'documents',
-      element: '.documents',
+      element: '#d',
     })
   }
 

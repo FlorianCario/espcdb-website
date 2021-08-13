@@ -4,7 +4,7 @@ export default class Partenaires extends Page {
   constructor() {
     super({
       id: 'partenaires',
-      element: '.partenaires',
+      element: '#p',
     })
   }
 

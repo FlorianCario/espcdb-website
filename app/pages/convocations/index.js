@@ -4,7 +4,7 @@ export default class Convocations extends Page {
   constructor() {
     super({
       id: 'convocations',
-      element: '.convocations',
+      element: '#conv',
     })
   }
 
