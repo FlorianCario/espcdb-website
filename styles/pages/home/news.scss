@@ -25,7 +25,7 @@
   left: -3rem;
   bottom: -2rem;
 
-  svg {
+  img {
     width: 35rem;
     height: 13.4rem;
   }
@@ -33,7 +33,7 @@
   @include media('<phone') {
     left: 0rem;
     bottom: 0rem;
-    svg {
+    img {
       width: 19.1rem;
       height: 7.3rem;
     }
@@ -54,6 +54,10 @@
 
 .home__news__slider--prev {
   margin-right: 2.6rem;
+}
+
+.home__news__slider--next {
+  transform: rotate(180deg);
 }
 
 .home__news__slider {

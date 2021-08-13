@@ -42,11 +42,12 @@
   position: absolute;
   width: 28.1rem;
   height: auto;
-  right: 5rem;
+  right: 4rem;
   bottom: 0;
 
-  svg {
+  img {
     width: 100%;
+    height: auto;
   }
 
   @include media('<phone') {
