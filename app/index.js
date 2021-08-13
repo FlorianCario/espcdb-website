@@ -52,6 +52,7 @@ class App {
       '/espcdb-website/partenaires': this.partenaires,
     }
     this.page = this.pages[this.template]
+    console.log(this.template);
     this.page.create()
   }
 
