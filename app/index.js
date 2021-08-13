@@ -9,12 +9,18 @@ import Contact from 'pages/contact'
 import Convocations from 'pages/convocations'
 import Partenaires from 'pages/partenaires'
 
+// components
+import Footer from 'components/Footer'
+import Scrolling from 'components/Scrolling'
+
 
 
 class App {
   constructor() {
     this.loadFonts()
     this.createContent()
+    this.createSmoothScroll()
+    this.createFooter()
     this.createPages()
 
     this.onResize()
@@ -25,12 +31,20 @@ class App {
     this.template = this.content.getAttribute('data-template')
   }
 
+  createSmoothScroll() {
+    this.scroll = new Scrolling()
+  }
+
   loadFonts() {
     Webfont.load({
       custom: {
         families: ['Dharma Gothic', 'Optician Sans', 'Silka']
       }
     })
+  }
+
+  createFooter() {
+    this.footer = new Footer()
   }
 
   createPages() {
@@ -56,7 +70,8 @@ class App {
   }
 }
 
-window.addEventListener('load', _ => {
+window.addEventListener('DOMContentLoaded', _ => {
   new App()
 })
+
 

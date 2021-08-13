@@ -2,7 +2,7 @@ import Component from 'classes/Component'
 import gsap from 'gsap'
 import imagesLoaded from 'imagesloaded'
 
-export default class HomeSlider extends Component {
+export default class Preloader extends Component {
   constructor() {
     super({
       element: '.preloader',
