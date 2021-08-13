@@ -43,16 +43,25 @@ class App {
     this.partenaires = new Partenaires()
 
     this.pages = {
+      // dev
       '/': this.home,
       '/documents': this.documents,
       '/actualites': this.actualites,
       '/boutique': this.boutique,
       '/contact': this.contact,
       '/convocations': this.convocations,
-      '/partenaires': this.partenaires
+      '/partenaires': this.partenaires,
+
+      // build
+      '/espcdb-website/': this.home,
+      '/espcdb-website/documents': this.documents,
+      '/espcdb-website/actualites': this.actualites,
+      '/espcdb-website/boutique': this.boutique,
+      '/espcdb-website/contact': this.contact,
+      '/espcdb-website/convocations': this.convocations,
+      '/espcdb-website/partenaires': this.partenaires
     }
     this.page = this.pages[this.template]
-    console.log(this.page);
     this.page.create()
   }
 
