@@ -51,6 +51,7 @@ module.exports = {
   },
 
   devServer: {
+    publicPath: '/espcdb-website/',
     hot: true,
   },
 

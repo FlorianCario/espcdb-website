@@ -13,7 +13,7 @@ import Partenaires from 'pages/partenaires'
 
 class App {
   constructor() {
-    this.template = window.location.pathname || `/espcdb-website${window.location.pathname}`
+    this.template = window.location.pathname
     this.loadFonts()
     this.createPages()
     this.createComponents()
@@ -43,13 +43,13 @@ class App {
     this.partenaires = new Partenaires()
 
     this.pages = {
-      '/': this.home,
-      '/documents': this.documents,
-      '/actualites': this.actualites,
-      '/boutique': this.boutique,
-      '/contact': this.contact,
-      '/convocations': this.convocations,
-      '/partenaires': this.partenaires,
+      '/espcdb-website/': this.home,
+      '/espcdb-website/documents': this.documents,
+      '/espcdb-website/actualites': this.actualites,
+      '/espcdb-website/boutique': this.boutique,
+      '/espcdb-website/contact': this.contact,
+      '/espcdb-website/convocations': this.convocations,
+      '/espcdb-website/partenaires': this.partenaires,
     }
     this.page = this.pages[this.template]
     this.page.create()

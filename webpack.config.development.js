@@ -12,6 +12,6 @@ module.exports = merge(config, {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/espcdb-website/'
   }
 })
