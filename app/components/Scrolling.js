@@ -1,5 +1,4 @@
 import Component from 'classes/Component'
-import { lerp } from 'utils/maths'
 
 export default class Scrolling extends Component {
   constructor() {

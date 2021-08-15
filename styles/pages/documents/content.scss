@@ -1,0 +1,62 @@
+.documents__content {
+  position: relative;
+}
+
+.documents__content__wrapper {
+  padding-top: 10.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.documents__content__filter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.documents__content__table {
+  margin-top: 6.9rem;
+  margin-bottom: 18.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.documents__content__tableItem {
+  width: 100%;
+  margin-bottom: 2.9rem;
+}
+
+.documents__content__contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2.9rem;
+}
+
+.documents__content__left {
+  max-width: 61rem;
+}
+
+.documents__content__right {
+  display: flex;
+  align-items: center;
+}
+
+.documents__content__title {
+  @extend %description-32;
+}
+
+.documents__content__date {
+  @extend %description-14;
+  margin-right: 22.6rem;
+
+  @include media('<phone') {
+    margin-right: 11.3rem;
+  }
+}
+
+.documents__content__line {
+  width: 100%;
+  height: 1px;
+  width: 100%;
+  background-color: $color-black;
+}

@@ -19,6 +19,7 @@
 // components
 @import './components/cta';
 @import './components/preloader';
+@import './components/forms';
 
 // layout
 @import './layout/container';
@@ -33,3 +34,10 @@
 @import './pages/home/news';
 @import './pages/home/recruit';
 @import './pages/home/teams';
+
+@import './pages/documents/hero';
+@import './pages/documents/intro';
+@import './pages/documents/content';
+
+@import './pages/contact/hero';
+@import './pages/contact/form';

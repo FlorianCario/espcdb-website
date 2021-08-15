@@ -36,7 +36,6 @@ export default class Paragraph extends Animation {
     })
   }
   animateOut() {
-
     GSAP.set(this.element, {
       autoAlpha: 0,
     })

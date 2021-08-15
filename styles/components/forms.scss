@@ -1,0 +1,34 @@
+.custom-select {
+  @extend %title-16;
+  display: flex;
+  align-items: center;
+
+
+  select {
+    outline: none;
+    border-bottom: solid 1px $color-green;
+    padding-bottom: .6rem;
+    padding-right: 1rem;
+    color: $color-green;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.custom-select::after {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: -.5rem;
+  background-color: $color-orange;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.custom-input {
+  @extend %title-16;
+  border-bottom: 1px solid $color-black;
+  padding-bottom: 1.2rem;
+}
+

@@ -1,4 +1,4 @@
-import Webfont from 'webfontloader'
+import FontFaceObserver from 'fontfaceobserver/fontfaceobserver.standalone'
 
 // pages
 import Home from 'pages/home'
@@ -17,13 +17,13 @@ import Scrolling from 'components/Scrolling'
 
 class App {
   constructor() {
-    this.loadFonts()
     this.createContent()
     this.createSmoothScroll()
     this.createFooter()
     this.createPages()
 
     this.onResize()
+
   }
 
   createContent() {
@@ -33,14 +33,6 @@ class App {
 
   createSmoothScroll() {
     this.scroll = new Scrolling()
-  }
-
-  loadFonts() {
-    Webfont.load({
-      custom: {
-        families: ['Dharma Gothic', 'Optician Sans', 'Silka']
-      }
-    })
   }
 
   createFooter() {
@@ -59,7 +51,6 @@ class App {
       partenaires: new Partenaires()
     }
     this.page = this.pages[this.template]
-    console.log(this.page);
     this.page.create()
   }
 
@@ -70,8 +61,15 @@ class App {
   }
 }
 
-window.addEventListener('DOMContentLoaded', _ => {
-  new App()
-})
+const fontDharmaGothic = new FontFaceObserver('Dharma Gothic')
+const fontOpticianSans = new FontFaceObserver('Optician Sans')
+const fontSilka = new FontFaceObserver('Silka')
+
+Promise.all([fontDharmaGothic.load(), fontOpticianSans.load(), fontSilka.load()])
+  .then(_ => {
+    window.APP = new App()
+  }).catch(_ => {
+    window.APP = new App()
+  })
 
 

@@ -1,0 +1,49 @@
+.contact__form {
+  position: relative;
+}
+
+.contact__form__wrapper {
+  padding-top: calc(20.6rem + 9.8rem);
+  margin-bottom: 22rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media('<phone') {
+    padding-top: 60rem;
+  }
+}
+
+.contact__form__subtitle {
+  @extend %description-12;
+  color: $color-beige;
+
+  @include media('<phone') {
+    margin-bottom: 6.4rem;
+  }
+}
+
+.contact__form__block {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 8rem;
+
+  @include media('<phone') {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.custom-input {
+  @include media('<phone') {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.contact__form__field--email, .contact__form__field--object {
+  margin-left: 12.1rem;
+
+  @include media('<phone') {
+    margin-left: 0;
+  }
+}

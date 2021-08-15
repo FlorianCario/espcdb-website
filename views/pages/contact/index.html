@@ -354,96 +354,152 @@
       </g>
     </svg>
   </div>
-  <nav class="navigation">
-    <div class="navigation__mobile"></div>
-    <div class="navigation__desktop">
-      <div class="navigation__container l-container">
-        <ul class="navigation__left">
-          <li>
-            <a href="#" class="navigation__link">Club</a>
-          </li>
-          <li>
-            <a href="#" class="navigation__link">Equipes</a>
-          </li>
-          <li>
-            <a href="/actualites/" class="navigation__link">Actualites</a>
-          </li>
-          <li>
-            <a href="/convocations/" class="navigation__link">Convocations</a>
-          </li>
-        </ul>
-        <div class="navigation__logo">
-          <a href="/"><img src="../../../assets/LogoESPCDB.svg" alt="Logo Espérance Chartres de Bretagne Football"></a>
-        </div>
-        <ul class="navigation__right">
-          <li>
-            <a href="/partenaires/" class="navigation__link">partenaires</a>
-          </li>
-          <li>
-            <a href="/documents/" class="navigation__link">documents</a>
-          </li>
-          <li>
-            <a href="/boutique/" class="navigation__link">boutique</a>
-          </li>
-          <li>
-            <a href="/contact/" class="navigation__link">contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main id="main">
-    <div id="cont" class="page" data-template="contact">
-      <footer class="footer ">
-        <div class="footer__upper l-container">
-          <div class="footer__logo">
-            <img src="../../../assets/LogoESPCDB.svg" />
+  <div data-scroll>
+    <div data-scroll-content>
+      <nav class="navigation navigation--black">
+        <div class="navigation__mobile"></div>
+        <div class="navigation__desktop">
+          <div class="navigation__container l-container">
+            <ul class="navigation__left">
+              <li>
+                <a href="#" class="navigation__link">Club</a>
+              </li>
+              <li>
+                <a href="#" class="navigation__link">Equipes</a>
+              </li>
+              <li>
+                <a href="/actualites/" class="navigation__link">Actualites</a>
+              </li>
+              <li>
+                <a href="/convocations/" class="navigation__link">Convocations</a>
+              </li>
+            </ul>
+            <div class="navigation__logo">
+              <a href="/"><img src="../../../assets/LogoESPCDB.svg"
+                  alt="Logo Espérance Chartres de Bretagne Football"></a>
+            </div>
+            <ul class="navigation__right">
+              <li>
+                <a href="/partenaires/" class="navigation__link">partenaires</a>
+              </li>
+              <li>
+                <a href="/documents/" class="navigation__link">documents</a>
+              </li>
+              <li>
+                <a href="/boutique/" class="navigation__link">boutique</a>
+              </li>
+              <li>
+                <a href="/contact/" class="navigation__link">contact</a>
+              </li>
+            </ul>
           </div>
-          <ul class="footer__links">
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Le club</a></li>
-              <li class="footer__link"><a href="#">Les equipes</a></li>
-              <li class="footer__link"><a href="#">Actualites</a></li>
-            </ul>
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Convocations</a></li>
-              <li class="footer__link"><a href="#">Documents</a></li>
-              <li class="footer__link"><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Partenaires</a></li>
-              <li class="footer__link"><a href="#">Boutique</a></li>
-              <div class="footer__socials">
-                <a href="https://twitter.com/ESPCHARTRESfoot" target="_blank" rel="noopener noreferer"
-                  class="footer__socialLink">
-                  <img src="../../../assets/instagram.svg" />
-                </a>
-                <a href="https://www.instagram.com/espchartresdebretagnefootball/" target="_blank"
-                  rel="noopener noreferer" class="footer__socialLink">
-                  <img src="../../../assets/twitter-fill.svg" />
-                </a>
-                <a href="https://www.facebook.com/espchartres" target="_blank" rel="noopener noreferer"
-                  class="footer__socialLink">
-                  <img src="../../../assets/facebook-f.svg" />
-                </a>
+        </div>
+      </nav>
+      <main id="main">
+        <div id="cont" class="page" data-template="contact">
+          <section class="contact__hero">
+            <div class="contact__hero__wrapper">
+              <div class="contact__hero__left l-container">
+                <div class="contact__hero__breadcrumb">
+                  <span class="contact__hero__breadcrumb--1">Accueil</span>
+                  <div class="contact__hero__line"></div>
+                  <span class="contact__hero__breadcrumb--2">Contact</span>
+                </div>
+                <h1 class="contact__hero__title">Contactez-nous</h1>
+                <div class="contact__hero__contacts">
+                  <p class="contact__hero__address">
+                    12 Rue de la Crx aux Potiers, 35131 Chartres-de-Bretagne
+                  </p>
+                  <a class="contact__hero__email"
+                    href="mailto:esp.chartres.football@gmail.com">esp.chartres.football@gmail.com</a>
+                </div>
               </div>
-            </ul>
-          </ul>
-          <button class="footer__backTop">
-            <img src="../../../assets/arrow_up.svg" />
-          </button>
+              <div class="contact__hero__right contact__hero__map">
+                <div class="contact__hero__mapWrapper">
+                  <img src="../../../assets/map.png" class="contact__hero__mapImage" alt="map">
+                </div>
+              </div>
+            </div>
+            <div class="contact__hero__background"></div>
+          </section>
+          <section class="contact__form l-container">
+            <div class="contact__form__wrapper">
+              <div class="contact__form__left">
+                <h3 class="contact__form__subtitle">/ FORMULAIRE DE CONTACT</h3>
+              </div>
+              <div class="contact__form__right">
+                <form action="">
+                  <div class="contact__form__block">
+                    <input type="text" name="nom" placeholder="Nom" class="custom-input contact__form__field--name">
+                    <input type="email" name="email" placeholder="email"
+                      class="custom-input contact__form__field--email">
+                  </div>
+                  <div class="contact__form__block">
+                    <input type="tel" name="telephone" placeholder="Telephone"
+                      class="custom-input contact__form__field--phone">
+                    <input type="text" name="objet" placeholder="Objet"
+                      class="custom-input contact__form__field--object">
+                  </div>
+                  <div class="contact__form__block">
+                    <textarea name="message" placeholder="Message" class="custom-input contact__form__field--message">
+                      </textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <footer class="footer ">
+            <div class="footer__upper l-container">
+              <div class="footer__logo">
+                <img src="../../../assets/LogoESPCDB.svg" />
+              </div>
+              <ul class="footer__links">
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Le club</a></li>
+                  <li class="footer__link"><a href="#">Les equipes</a></li>
+                  <li class="footer__link"><a href="#">Actualites</a></li>
+                </ul>
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Convocations</a></li>
+                  <li class="footer__link"><a href="#">Documents</a></li>
+                  <li class="footer__link"><a href="#">Contact</a></li>
+                </ul>
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Partenaires</a></li>
+                  <li class="footer__link"><a href="#">Boutique</a></li>
+                  <div class="footer__socials">
+                    <a href="https://twitter.com/ESPCHARTRESfoot" target="_blank" rel="noopener noreferer"
+                      class="footer__socialLink">
+                      <img src="../../../assets/instagram.svg" />
+                    </a>
+                    <a href="https://www.instagram.com/espchartresdebretagnefootball/" target="_blank"
+                      rel="noopener noreferer" class="footer__socialLink">
+                      <img src="../../../assets/twitter-fill.svg" />
+                    </a>
+                    <a href="https://www.facebook.com/espchartres" target="_blank" rel="noopener noreferer"
+                      class="footer__socialLink">
+                      <img src="../../../assets/facebook-f.svg" />
+                    </a>
+                  </div>
+                </ul>
+              </ul>
+              <button class="footer__backTop">
+                <img src="../../../assets/arrow_up.svg" />
+              </button>
+            </div>
+            <div class="footer__bottom l-container">
+              <div class="footer__line"></div>
+              <ul class="footer__submenu">
+                <li class="footer__sublink">@copyright esperance chartres de bretagne. All rights reserved</li>
+                <li class="footer__sublink"><a href="#">Mentions legales</a></li>
+                <li class="footer__sublink"><a href="#">politique de confidentialite</a></li>
+              </ul>
+            </div>
+          </footer>
         </div>
-        <div class="footer__bottom l-container">
-          <div class="footer__line"></div>
-          <ul class="footer__submenu">
-            <li class="footer__sublink">@copyright esperance chartres de bretagne. All rights reserved</li>
-            <li class="footer__sublink"><a href="#">Mentions legales</a></li>
-            <li class="footer__sublink"><a href="#">politique de confidentialite</a></li>
-          </ul>
-        </div>
-      </footer>
+      </main>
     </div>
-  </main>
+  </div>
 </body>
 
 </html>

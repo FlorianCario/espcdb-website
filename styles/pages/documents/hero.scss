@@ -1,0 +1,61 @@
+.documents__hero {
+  position: relative;
+}
+
+.documents__hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62rem;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.documents__hero__overlay {
+  @extend %overlay;
+}
+
+.documents__hero__backgroundImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.document__hero__content {
+  position: relative;
+  padding-top: 50.1rem;
+  z-index: 4;
+}
+
+.document__hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.7rem;
+}
+
+.document__hero__breadcrumb--1 {
+  @extend %description-10;
+  color: $color-white;
+}
+
+.document__hero__line {
+  width: .9rem;
+  height: 1px;
+  opacity: .5;
+  background-color: $color-white;
+  margin: 0 .8rem;
+}
+
+.document__hero__breadcrumb--2 {
+  @extend %description-10;
+  color: $color-beige;
+}
+
+.documents__hero__title {
+  @extend %title-210;
+  color: $color-beige;
+}
