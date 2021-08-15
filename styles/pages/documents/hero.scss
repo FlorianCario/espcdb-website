@@ -25,24 +25,28 @@
   object-fit: cover;
 }
 
-.document__hero__content {
+.documents__hero__content {
   position: relative;
   padding-top: 50.1rem;
   z-index: 4;
+
+  @include media('<phone') {
+    padding-top: 53.1rem;
+  }
 }
 
-.document__hero__breadcrumb {
+.documents__hero__breadcrumb {
   display: flex;
   align-items: center;
   margin-bottom: 3.7rem;
 }
 
-.document__hero__breadcrumb--1 {
+.documents__hero__breadcrumb--1 {
   @extend %description-10;
   color: $color-white;
 }
 
-.document__hero__line {
+.documents__hero__line {
   width: .9rem;
   height: 1px;
   opacity: .5;
@@ -50,7 +54,7 @@
   margin: 0 .8rem;
 }
 
-.document__hero__breadcrumb--2 {
+.documents__hero__breadcrumb--2 {
   @extend %description-10;
   color: $color-beige;
 }

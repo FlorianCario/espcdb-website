@@ -1,0 +1,52 @@
+.article__content {
+  position: relative;
+  margin-bottom: 19.1rem;
+}
+.article__content__wrapper {
+  padding-top: 25.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media('<phone') {
+    padding-top: 56.8rem;
+  }
+}
+
+.article__content__left {
+  @include media('<phone') {
+    margin-bottom: 2.8rem;
+  }
+}
+
+.article__content__sharetitle {
+  @extend %description-12;
+  color: $color-beige;
+  margin-bottom: 2.8rem;
+}
+
+.article__content__socials {
+  display: flex;
+  flex-wrap: nowrap;
+  img {
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.article__content__right {
+  max-width: 36.4rem;
+  margin-right: 29rem;
+
+  @include media('<phone') {
+    margin-right: 0;
+  }
+}
+
+.article__content__textBlock {
+  margin-bottom: 5rem;
+}

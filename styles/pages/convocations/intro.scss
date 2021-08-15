@@ -1,0 +1,25 @@
+.convocations__intro {
+  position: relative;
+  padding-top: 14.1rem;
+}
+
+.convocations__intro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.convocations__intro__subtitle {
+  @extend %description-12;
+  color: $color-beige;
+
+  @include media('<phone') {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.convocations__intro__text {
+  @extend %description-45;
+  color: $color-green;
+  max-width: 70.3rem;
+}

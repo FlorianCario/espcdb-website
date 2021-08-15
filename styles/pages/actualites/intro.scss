@@ -1,0 +1,76 @@
+.actualites__intro {
+  position: relative;
+}
+
+.actualites__intro__wrapper {
+  position: relative;
+  margin-top: 15.3rem;
+  width: 100%;
+  height: 64.1rem;
+  background-color: $color-green;
+  padding: 9.45rem 9.7rem;
+
+  @include media('<phone') {
+    padding: 3.3rem 2.6rem;
+  }
+}
+
+.actualites__intro__arrows {
+  position: absolute;
+  top: -5rem;
+  right: 2rem;
+  width: 10.8rem;
+  height: 10.8rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media('<phone') {
+    width: 4.2rem;
+    height: 4.2rem;
+    top: -2rem;
+  }
+}
+
+.actualites__intro__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.actualites__intro__subtitle {
+  @extend %description-12;
+  color: $color-beige;
+
+  @include media('<phone') {
+    margin-bottom: 5.2rem;
+  }
+}
+
+.actualites__intro__content {
+  color: $color-white;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+.actualites__intro__date{
+  @extend %title-16;
+  color: $color-beige;
+  margin-bottom: 2.1rem;
+}
+.actualites__intro__title{
+  @extend %description-55;
+  margin-bottom: 6.4rem;
+  text-transform: none;
+}
+
+.actualites__intro__text{
+  margin-bottom: 3rem;
+  max-width: 35.2rem;
+}
+
+.actualites__intro__cta {
+  align-self: flex-start;
+}

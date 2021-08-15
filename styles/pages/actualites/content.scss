@@ -1,0 +1,47 @@
+.actualites__content {
+  position: relative;
+}
+
+.actualites__content__wrapper {
+  padding-top: 9.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.actualites__content__filter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actualites__content__cards {
+  margin-top: 4.6rem;
+  margin-bottom: 13.5rem;
+  display: grid;
+  grid-row-gap: 4.8rem;
+  grid-template-columns: repeat( auto-fit, minmax(27rem, 1fr) );
+  justify-items: center;
+}
+
+.actualites__content__card {
+  background-color: $color-white;
+  max-width: 27rem;
+  padding: 3.6rem 2.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.actualites__content__date {
+  @extend %title-16;
+  margin-bottom: 8.1rem;
+}
+.actualites__content__title {
+  @extend %description-23;
+  color: $color-green;
+  margin-bottom: 2.6rem;
+}
+.actualites__content__text {
+  margin-bottom: 4.6rem;
+}
+.actualites__content__cta {
+  align-self: flex-start;
+}

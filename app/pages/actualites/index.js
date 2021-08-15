@@ -4,7 +4,7 @@ export default class Actualites extends Page {
   constructor() {
     super({
       id: 'actualites',
-      element: '#a',
+      element: '#ac',
     })
   }
 

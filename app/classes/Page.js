@@ -3,7 +3,6 @@ import map from 'lodash/map'
 
 import Title from 'animations/Title'
 import Paragraph from 'animations/Paragraph'
-import Parallax from 'animations/Parallax'
 import Line from 'animations/Line'
 
 
@@ -13,7 +12,6 @@ export default class Page {
     this.selectorChildren = {
       animationsTitles: '[data-animation="title"]',
       animationsParagraphs: '[data-animation="paragraph"]',
-      animationsParallax: '[data-animation="parallax"]',
       animationsLines: '[data-animation="line"]',
       ...elements,
     }
@@ -58,13 +56,6 @@ export default class Page {
       })
     })
     this.animations.push(...this.animationsParagraphs)
-
-    // parallaxes
-    this.animationsParallax = map(this.elements.animationsParallax, element => {
-      return new Parallax({
-        element
-      })
-    })
 
     // lines
     this.animationsLines = map(this.elements.animationsLines, element => {

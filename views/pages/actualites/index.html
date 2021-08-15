@@ -354,98 +354,264 @@
       </g>
     </svg>
   </div>
-  <nav class="navigation">
-    <div class="navigation__mobile"></div>
-    <div class="navigation__desktop">
-      <div class="navigation__container l-container">
-        <ul class="navigation__left">
-          <li>
-            <a href="#" class="navigation__link">Club</a>
-          </li>
-          <li>
-            <a href="#" class="navigation__link">Equipes</a>
-          </li>
-          <li>
-            <a href="/actualites/" class="navigation__link">Actualites</a>
-          </li>
-          <li>
-            <a href="/convocations/" class="navigation__link">Convocations</a>
-          </li>
-        </ul>
-        <div class="navigation__logo">
-          <a href="/"><img src="../../../assets/LogoESPCDB.svg" alt="Logo Espérance Chartres de Bretagne Football"></a>
-        </div>
-        <ul class="navigation__right">
-          <li>
-            <a href="/partenaires/" class="navigation__link">partenaires</a>
-          </li>
-          <li>
-            <a href="/documents/" class="navigation__link">documents</a>
-          </li>
-          <li>
-            <a href="/boutique/" class="navigation__link">boutique</a>
-          </li>
-          <li>
-            <a href="/contact/" class="navigation__link">contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main id="main">
-    <div id="a" class="page" data-template="actualites">
+  <div data-scroll>
+    <div data-scroll-content>
 
-
-      <footer class="footer ">
-        <div class="footer__upper l-container">
-          <div class="footer__logo">
-            <img src="../../../assets/LogoESPCDB.svg" />
+      <nav class="navigation">
+        <div class="navigation__mobile"></div>
+        <div class="navigation__desktop">
+          <div class="navigation__container l-container">
+            <ul class="navigation__left">
+              <li>
+                <a href="#" class="navigation__link">Club</a>
+              </li>
+              <li>
+                <a href="#" class="navigation__link">Equipes</a>
+              </li>
+              <li>
+                <a href="/actualites/" class="navigation__link">Actualites</a>
+              </li>
+              <li>
+                <a href="/convocations/" class="navigation__link">Convocations</a>
+              </li>
+            </ul>
+            <div class="navigation__logo">
+              <a href="/"><img src="../../../assets/LogoESPCDB.svg"
+                  alt="Logo Espérance Chartres de Bretagne Football"></a>
+            </div>
+            <ul class="navigation__right">
+              <li>
+                <a href="/partenaires/" class="navigation__link">partenaires</a>
+              </li>
+              <li>
+                <a href="/documents/" class="navigation__link">documents</a>
+              </li>
+              <li>
+                <a href="/boutique/" class="navigation__link">boutique</a>
+              </li>
+              <li>
+                <a href="/contact/" class="navigation__link">contact</a>
+              </li>
+            </ul>
           </div>
-          <ul class="footer__links">
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Le club</a></li>
-              <li class="footer__link"><a href="#">Les equipes</a></li>
-              <li class="footer__link"><a href="#">Actualites</a></li>
-            </ul>
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Convocations</a></li>
-              <li class="footer__link"><a href="#">Documents</a></li>
-              <li class="footer__link"><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer__col">
-              <li class="footer__link"><a href="#">Partenaires</a></li>
-              <li class="footer__link"><a href="#">Boutique</a></li>
-              <div class="footer__socials">
-                <a href="https://twitter.com/ESPCHARTRESfoot" target="_blank" rel="noopener noreferer"
-                  class="footer__socialLink">
-                  <img src="../../../assets/instagram.svg" />
+        </div>
+      </nav>
+      <main id="main">
+        <div id="ac" class="page" data-template="actualites">
+          <section class="actualites__hero">
+            <div class="actualites__hero__content l-container">
+              <div class="actualites__hero__breadcrumb">
+                <span class="actualites__hero__breadcrumb--1">Accueil</span>
+                <div class="actualites__hero__line"></div>
+                <span class="actualites__hero__breadcrumb--2">Actualites</span>
+              </div>
+              <h1 class="actualites__hero__title" data-animation="title">Actualites</h1>
+            </div>
+            <div class="actualites__hero__background">
+              <div class="actualites__hero__overlay"></div>
+              <img src="../../../assets/image-actu-hero.png" alt="" class="actualites__hero__backgroundImage">
+            </div>
+          </section>
+          <section class="actualites__intro l-container">
+            <div class="actualites__intro__wrapper">
+              <img src="../../../assets/looping-arrows.svg" class="actualites__intro__arrows">
+              <div class="actualites__intro__inner">
+                <div class="actualites__intro__subtitle">/ Actualites a la une</div>
+                <div class="actualites__intro__content">
+                  <span class="actualites__intro__date">08/06/21</span>
+                  <h2 class="actualites__intro__title">Méthode Coerver - Interview Yannis Le Dorse</h2>
+                  <p class="actualites__intro__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lobortis
+                    egestas sed ullamcorper bibendum. Eu, accumsan urna, velit lectus a vitae sit. Nullam vitae maecenas
+                    nulla ut ultrices morbi sem nunc. Vivamus dui id semper id in turpis scelerisque. </p>
+                  <button class="actualites__intro__cta cta cta-icon"><a href="/actualites/actu-template-2/">En savoir
+                      plus</a></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="actualites__content l-container">
+            <div class="actualites__content__wrapper">
+              <div class="actualites__content__filter">
+                <div class="custom-select">
+                  <select>
+                    <option value="0">Saison 2021-2022</option>
+                    <option value="1">Archives</option>
+                  </select>
+                </div>
+              </div>
+              <div class="actualites__content__cards">
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
                 </a>
-                <a href="https://www.instagram.com/espchartresdebretagnefootball/" target="_blank"
-                  rel="noopener noreferer" class="footer__socialLink">
-                  <img src="../../../assets/twitter-fill.svg" />
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
                 </a>
-                <a href="https://www.facebook.com/espchartres" target="_blank" rel="noopener noreferer"
-                  class="footer__socialLink">
-                  <img src="../../../assets/facebook-f.svg" />
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
+                </a>
+                <a href="/actualites/actu-template/">
+                  <div class="actualites__content__card">
+                    <span class="actualites__content__date">04/06/21</span>
+                    <h3 class="actualites__content__title">Corentin Et Florian Valident Le Bmf !</h3>
+                    <p class="actualites__content__text">La dimension d'un projet sportif passe notamment par la
+                      formation, de ses joueurs bien évidemment, mais aussi de ses éducateurs...</p>
+                    <button class="actualites__content__cta cta cta-icon">En savoir plus</button>
+                  </div>
                 </a>
               </div>
-            </ul>
-          </ul>
-          <button class="footer__backTop">
-            <img src="../../../assets/arrow_up.svg" />
-          </button>
+            </div>
+          </section>
+          <section class="actualites__pager l-container">
+            <div class="actualites__pager__wrapper">
+              <span class="actualites__pager__previous">Page précédente</span>
+              <span class="actualites__pager__numbers"><span class="actualites__pager--current">1 </span> 2 3 4
+                ...</span>
+              <span class="actualites__pager__next">Page suivante</span>
+            </div>
+          </section>
+          <div class="actualites__background"></div>
+          <footer class="footer ">
+            <div class="footer__upper l-container">
+              <div class="footer__logo">
+                <img src="../../../assets/LogoESPCDB.svg" />
+              </div>
+              <ul class="footer__links">
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Le club</a></li>
+                  <li class="footer__link"><a href="#">Les equipes</a></li>
+                  <li class="footer__link"><a href="#">Actualites</a></li>
+                </ul>
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Convocations</a></li>
+                  <li class="footer__link"><a href="#">Documents</a></li>
+                  <li class="footer__link"><a href="#">Contact</a></li>
+                </ul>
+                <ul class="footer__col">
+                  <li class="footer__link"><a href="#">Partenaires</a></li>
+                  <li class="footer__link"><a href="#">Boutique</a></li>
+                  <div class="footer__socials">
+                    <a href="https://twitter.com/ESPCHARTRESfoot" target="_blank" rel="noopener noreferer"
+                      class="footer__socialLink">
+                      <img src="../../../assets/instagram.svg" />
+                    </a>
+                    <a href="https://www.instagram.com/espchartresdebretagnefootball/" target="_blank"
+                      rel="noopener noreferer" class="footer__socialLink">
+                      <img src="../../../assets/twitter-fill.svg" />
+                    </a>
+                    <a href="https://www.facebook.com/espchartres" target="_blank" rel="noopener noreferer"
+                      class="footer__socialLink">
+                      <img src="../../../assets/facebook-f.svg" />
+                    </a>
+                  </div>
+                </ul>
+              </ul>
+              <button class="footer__backTop">
+                <img src="../../../assets/arrow_up.svg" />
+              </button>
+            </div>
+            <div class="footer__bottom l-container">
+              <div class="footer__line"></div>
+              <ul class="footer__submenu">
+                <li class="footer__sublink">@copyright esperance chartres de bretagne. All rights reserved</li>
+                <li class="footer__sublink"><a href="#">Mentions legales</a></li>
+                <li class="footer__sublink"><a href="#">politique de confidentialite</a></li>
+              </ul>
+            </div>
+          </footer>
         </div>
-        <div class="footer__bottom l-container">
-          <div class="footer__line"></div>
-          <ul class="footer__submenu">
-            <li class="footer__sublink">@copyright esperance chartres de bretagne. All rights reserved</li>
-            <li class="footer__sublink"><a href="#">Mentions legales</a></li>
-            <li class="footer__sublink"><a href="#">politique de confidentialite</a></li>
-          </ul>
-        </div>
-      </footer>
+      </main>
     </div>
-  </main>
+  </div>
 </body>
 
 </html>

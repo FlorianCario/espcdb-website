@@ -4,8 +4,6 @@ import GSAP from 'gsap'
 export default class Line extends Animation {
   constructor({ element, elements }) {
     super({ element, elements })
-
-    console.log("line");
   }
 
   animateIn() {
@@ -18,9 +16,10 @@ export default class Line extends Animation {
       scaleX: 1,
       ease: 'power3.out',
       duration: 1.5,
-      delay: .5
+      delay: .2
     })
   }
+
   animateOut() {
 
   }

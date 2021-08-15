@@ -12,3 +12,4 @@ export default class Convocations extends Page {
     super.create()
   }
 }
+

@@ -18,7 +18,9 @@ const notHomePages = [
   'convocations/index',
   'documents/index',
   'partenaires/index',
-  'actualites/index'
+  'actualites/index',
+  'actualites/actu-template/index',
+  'actualites/actu-template-2/index'
 ]
 
 const mapFolders = notHomePages.map(filename => {

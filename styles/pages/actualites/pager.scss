@@ -1,0 +1,14 @@
+.actualites__pager {
+  color: $color-green;
+  margin-bottom: 16.6rem;
+}
+
+.actualites__pager__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.actualites__pager--current {
+  text-decoration: underline;
+}

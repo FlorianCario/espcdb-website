@@ -1,0 +1,6 @@
+.actualites__background {
+  @extend %cover;
+  z-index: -2;
+  margin-top: 116.5rem;
+  background-color: $color-light-grey;
+}

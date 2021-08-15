@@ -8,6 +8,7 @@ import Boutique from 'pages/boutique'
 import Contact from 'pages/contact'
 import Convocations from 'pages/convocations'
 import Partenaires from 'pages/partenaires'
+import Article from 'pages/article'
 
 // components
 import Footer from 'components/Footer'
@@ -44,11 +45,12 @@ class App {
     this.pages = {
       home: new Home(),
       documents: new Documents(),
+      convocations: new Convocations(),
       actualites: new Actualites(),
       boutique: new Boutique(),
       contact: new Contact(),
-      convocations: new Convocations(),
-      partenaires: new Partenaires()
+      partenaires: new Partenaires(),
+      article: new Article()
     }
     this.page = this.pages[this.template]
     this.page.create()

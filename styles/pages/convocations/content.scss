@@ -1,0 +1,62 @@
+.convocations__content {
+  position: relative;
+}
+
+.convocations__content__wrapper {
+  padding-top: 10.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.convocations__content__filter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.convocations__content__table {
+  margin-top: 6.9rem;
+  margin-bottom: 18.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.convocations__content__tableItem {
+  width: 100%;
+  margin-bottom: 2.9rem;
+}
+
+.convocations__content__contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2.9rem;
+}
+
+.convocations__content__left {
+  max-width: 61rem;
+}
+
+.convocations__content__right {
+  display: flex;
+  align-items: center;
+}
+
+.convocations__content__title {
+  @extend %description-32;
+}
+
+.convocations__content__date {
+  @extend %description-14;
+  margin-right: 22.6rem;
+
+  @include media('<phone') {
+    margin-right: 11.3rem;
+  }
+}
+
+.convocations__content__line {
+  width: 100%;
+  height: 1px;
+  width: 100%;
+  background-color: $color-black;
+}
