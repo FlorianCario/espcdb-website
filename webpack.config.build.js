@@ -5,14 +5,14 @@ const { merge } = require('webpack-merge')
 const config = require('./webpack.config')
 
 module.exports = merge(config, {
-  mode: 'production',
+    mode: 'production',
 
-  output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/espcdb-website/'
-  },
+    output: {
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/espcdb-website/'
+    },
 
-  plugins: [
-    new CleanWebpackPlugin()
-  ]
+    plugins: [
+        new CleanWebpackPlugin()
+    ]
 })
