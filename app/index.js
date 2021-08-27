@@ -1,4 +1,5 @@
 import SmoothScrollbar from 'smooth-scrollbar'
+import FontFaceObserver from 'fontfaceobserver'
 
 // pages
 import Home from 'pages/home'
@@ -77,6 +78,13 @@ class App {
     }
 }
 
-new App()
+var fontA = new FontFaceObserver('Silka');
+var fontB = new FontFaceObserver('Optician Sans');
+var fontC = new FontFaceObserver('Dharma Gothic')
 
+Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(_ => {
+    new App()
+});
+
+console.log('%c Designed and developed by Florian Cario', 'background: #000; color: #fff;')
 

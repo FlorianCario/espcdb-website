@@ -26,6 +26,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "file-loader": "^6.2.0",
+    "fontfaceobserver": "^2.1.0",
     "gsap": "^3.7.1",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
