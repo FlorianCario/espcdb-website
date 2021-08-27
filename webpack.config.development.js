@@ -8,7 +8,13 @@ module.exports = merge(config, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        writeToDisk: true
+        devMiddleware: {
+            writeToDisk: true
+        },
+        client: {
+            overlay: true,
+            progress: true
+        }
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

@@ -32,6 +32,7 @@
 .footer__links {
   display: flex;
   margin-top: 3.7rem;
+  margin-right: 15rem;
 
   @include media('<phone') {
     flex-direction: column;

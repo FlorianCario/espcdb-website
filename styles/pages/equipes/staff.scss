@@ -1,0 +1,104 @@
+.equipes__staff {
+    position: relative;
+}
+
+.equipes__staff__titleContainer {
+    margin: 14.5rem 0;
+    position: relative;
+
+    @include media('<phone') {
+        margin: 9.8rem 0;
+    }
+}
+
+.equipes__staff__title {
+    @extend %title-100;
+    color: $color-white;
+    text-align: center;
+}
+
+.equipes__staff__circle {
+    position: absolute;
+    width: 32.54rem;
+    height: auto;
+    right: 35%;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include media('<phone') {
+      width: 21.45rem;
+      height: auto;
+      right: 10%;
+    }
+}
+
+.equipes__staff__cards {
+    margin: 0 8.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media('<phone') {
+        margin: 0 3rem;
+        justify-content: center;
+    }
+}
+
+.equipes__staff__card {
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+
+    &:nth-child(even) {
+        margin-top: 10.2rem;
+    }
+
+    @include media('<phone') {
+        &:nth-child(odd) {
+            margin-top: 10.2rem;
+        }
+    }
+}
+
+.equipes__staff__cardImageContainer {
+    width: 29.2rem;
+    height: 37.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.equipes__staff__cardImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipes__staff__cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 29.2rem;
+    margin-top: 1.7rem;
+}
+
+.equipes__staff__contentRight {
+    text-align: right;
+}
+
+.equipes__staff__cardName {
+    @extend %title-16;
+}
+
+.equipes__staff__cardFunction {
+    @extend %title-16;
+    margin-bottom: .7rem;
+}
+
+

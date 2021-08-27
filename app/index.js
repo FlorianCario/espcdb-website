@@ -1,3 +1,5 @@
+import SmoothScrollbar from 'smooth-scrollbar'
+
 // pages
 import Home from 'pages/home'
 import Documents from 'pages/documents'
@@ -7,9 +9,13 @@ import Contact from 'pages/contact'
 import Convocations from 'pages/convocations'
 import Partenaires from 'pages/partenaires'
 import Article from 'pages/article'
+import Equipes from 'pages/equipes'
+import Staff from 'pages/staff'
+import Historique from 'pages/historique'
 
 // components
-import Footer from 'components/Footer'
+import Preloader from 'components/Preloader'
+import Navigation from 'components/Navigation'
 
 
 
@@ -17,19 +23,32 @@ import Footer from 'components/Footer'
 class App {
     constructor() {
         this.createContent()
-        this.createFooter()
+        this.createNavigation()
         this.createPages()
+        this.createPreloader()
+        this.createSmoothScroll()
 
         this.onResize()
+    }
+
+    createNavigation() {
+        this.navigation = new Navigation()
+    }
+
+    createPreloader() {
+        this.preloader = new Preloader()
+    }
+
+    createSmoothScroll() {
+        this.scroller = document.body;
+        SmoothScrollbar.init(this.scroller, {
+            damping: 0.075
+        })
     }
 
     createContent() {
         this.content = document.querySelector('.page')
         this.template = this.content.getAttribute('data-template')
-    }
-
-    createFooter() {
-        this.footer = new Footer()
     }
 
     createPages() {
@@ -42,7 +61,10 @@ class App {
             boutique: new Boutique(),
             contact: new Contact(),
             partenaires: new Partenaires(),
-            article: new Article()
+            article: new Article(),
+            equipes: new Equipes(),
+            staff: new Staff(),
+            historique: new Historique()
         }
         this.page = this.pages[this.template]
         this.page.create()

@@ -1,0 +1,42 @@
+.staff__intro {
+    position: relative;
+}
+
+.staff__intro__content {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    @include media('<phone') {
+        justify-content: flex-start;
+        margin-top: 4.4rem;
+    }
+}
+
+.staff__intro__title {
+    @extend %title-50;
+    color: $color-green;
+
+    &.-benevoles {
+        margin-right: 9rem;
+    }
+}
+
+.staff__intro__circle {
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    width: 34.9rem;
+    height: auto;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include media('<phone') {
+        width: 27.9rem;
+        left: -4rem;
+    }
+}

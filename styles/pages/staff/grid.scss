@@ -1,0 +1,92 @@
+.staff__cards {
+    padding-top: 16.2rem;
+    padding-bottom: 31.4rem;
+    position: relative;
+}
+
+.staff__cards__background {
+    background-color: $color-light-grey;
+    position: absolute;
+    right: 0;
+    top: 85rem;
+    height: 207rem;
+    width: 83%;
+    z-index: -1;
+
+    @include media('<phone') {
+        width: 50%;
+        height: 85%;
+    }
+}
+
+
+.staff__cards__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 9rem;
+
+    @include media('<phone') {
+        justify-content: center;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.staff__card {
+    display: flex;
+    flex-direction: column;
+    color: $color-black;
+
+    &:nth-child(even) {
+        margin-top: 10.2rem;
+    }
+
+    @include media('<phone') {
+        &:nth-child(odd) {
+            margin-top: 10.2rem;
+        }
+    }
+}
+
+.staff__cardImageContainer {
+    width: 29.2rem;
+    height: 37.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.staff__cardImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff__cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 29.2rem;
+    margin-top: 1.7rem;
+}
+
+.staff__contentRight {
+    text-align: right;
+}
+
+.staff__cardName {
+    @extend %title-16;
+    color: $color-green;
+}
+
+.staff__cardFunction {
+    @extend %title-16;
+    margin-bottom: .7rem;
+}
+
+

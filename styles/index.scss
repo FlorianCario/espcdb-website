@@ -19,6 +19,7 @@
 // components
 @import './components/cta';
 @import './components/forms';
+@import './components/preloader';
 
 // layout
 @import './layout/container';
@@ -53,3 +54,17 @@
 @import './pages/actualites/intro';
 @import './pages/actualites/content';
 @import './pages/actualites/pager';
+
+@import './pages/equipes/equipes';
+@import './pages/equipes/hero';
+@import './pages/equipes/notes';
+@import './pages/equipes/pre-footer';
+@import './pages/equipes/presentation';
+@import './pages/equipes/staff';
+
+@import './pages/staff/hero';
+@import './pages/staff/intro';
+@import './pages/staff/grid';
+
+@import './pages/historique/hero';
+@import './pages/historique/timeline';

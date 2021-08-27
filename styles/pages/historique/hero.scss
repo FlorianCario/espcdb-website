@@ -1,0 +1,65 @@
+.historique__hero {
+    position: relative;
+  }
+
+  .historique__hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62rem;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .historique__hero__overlay {
+    @extend %overlay;
+  }
+
+  .historique__hero__backgroundImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .historique__hero__content {
+    position: relative;
+    padding-top: 50.1rem;
+    z-index: 4;
+
+    @include media('<phone') {
+      padding-top: 53.1rem;
+    }
+  }
+
+  .historique__hero__breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.7rem;
+  }
+
+  .historique__hero__breadcrumb--1 {
+    @extend %description-10;
+    color: $color-white;
+  }
+
+  .historique__hero__line {
+    width: .9rem;
+    height: 1px;
+    opacity: .5;
+    background-color: $color-white;
+    margin: 0 .8rem;
+  }
+
+  .historique__hero__breadcrumb--2 {
+    @extend %description-10;
+    color: $color-beige;
+  }
+
+  .historique__hero__title {
+    @extend %title-210;
+    color: $color-beige;
+  }

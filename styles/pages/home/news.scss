@@ -40,24 +40,12 @@
   }
 }
 
-.home__news__controlsContainer {
-  align-self: flex-end;
-  margin-bottom: 3rem;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-
-  @include media('<phone') {
-    margin-bottom: 2rem;
-  }
-}
-
-.home__news__slider--prev {
-  margin-right: 2.6rem;
-}
-
-.home__news__slider--next {
-  transform: rotate(180deg);
+.home__news__legend {
+    @extend %description-12;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    color: $color-beige;
 }
 
 .home__news__slider {
@@ -168,7 +156,7 @@
   width: 100vw;
   left: 0;
   top: 0;
-  height: 64.2rem;
+  height: 67.2rem;
   margin-top: 19.2rem;
   background-color: $color-light-grey;
 }
@@ -181,4 +169,8 @@
   .cta__icon {
     color: $color-white;
   }
+}
+
+.home__news__link {
+    margin-top: 2.4rem;
 }

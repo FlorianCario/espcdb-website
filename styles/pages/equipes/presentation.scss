@@ -1,0 +1,53 @@
+.equipes__presentation {
+    position: relative;
+}
+
+.equipes__presentation__content {
+    position: relative;
+    padding-top: 21rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 3;
+
+    @include media('<phone') {
+        padding-top: 13.4rem;
+     }
+}
+
+.equipes__presentation__subtitle {
+    @extend %description-12;
+    color: $color-beige;
+
+    @include media('<phone') {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.equipes__presentation__text {
+    @extend %description-45;
+    color: $color-white;
+    max-width: 70rem;
+}
+
+.equipes__presentation__pictureContainer {
+    position: relative;
+    width: 100%;
+    height: 57.1rem;
+    overflow: hidden;
+    margin-top: -5rem;
+    z-index: 1;
+
+    @include media('<phone') {
+       height: 18.7rem;
+    }
+}
+
+.equipes__presentation__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

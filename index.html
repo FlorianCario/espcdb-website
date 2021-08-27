@@ -15,44 +15,95 @@
 </head>
 
 <body>
+    <!-- PRELOADER -->
+    <div class="preloader"></div>
     <!-- NAVIGATION -->
     <nav class="navigation">
         <div class="navigation__mobile"></div>
         <div class="navigation__desktop">
             <div class="navigation__container l-container">
                 <ul class="navigation__left">
-                    <li>
-                        <a href="#" class="navigation__link">Club</a>
+                    <li class="navigation__dropdown">
+                        <button class="navigation__link">Club<svg class="navigation__link__caret" width="8" height="6"
+                                viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.75L4 4.25L7 0.75" stroke="#FAFAFA" />
+                            </svg>
+                            <div class="navigation__dropdown__content">
+                                <a class="dropdown__link" href="/club/historique">Historique</a>
+                                <a class="dropdown__link" href="/club/stade">Stade Remy Bellanger</a>
+                    <li class="dropdown__link has-sub">
+                        <a class="submenu" href="#">Staff</a>
+                        <div class="dropdown__sub">
+                            <a href="/club/conseil" class="submenu__link--sub">Conseil d'administration</a>
+                            <a href="/club/benevoles" class="submenu__link--sub">Benevoles</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#" class="navigation__link">Equipes</a>
-                    </li>
-                    <li>
-                        <a href="/actualites/" class="navigation__link">Actualites</a>
-                    </li>
-                    <li>
-                        <a href="/convocations/" class="navigation__link">Convocations</a>
-                    </li>
-                </ul>
-                <div class="navigation__logo">
-                    <a href="/"><img src="./assets/LogoESPCDB.svg"
-                            alt="Logo Espérance Chartres de Bretagne Football"></a>
+            </div>
+            </button>
+            </li>
+            <li class="navigation__dropdown">
+                <button class="navigation__link">Equipes<svg class="navigation__link__caret" width="8" height="6"
+                        viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0.75L4 4.25L7 0.75" stroke="#FAFAFA" />
+                    </svg>
+                    <div class="navigation__dropdown__content">
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Performance</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/seniors1" class="submenu__link--sub">SENIORS 1 R1 - Groupe
+                        B</a>
+                    <a href="/equipes/seniors2" class="submenu__link--sub">SENIORS 2 D1 - Groupe
+                        E</a>
+                    <a href="/equipes/seniors3" class="submenu__link--sub">SENIORS 3 D2 - Groupe
+                        F</a>
+                    <a href="/equipes/seniors4" class="submenu__link--sub">SENIORS 4 D4 </a>
+                    <a href="/equipes/veterans" class="submenu__link--sub">VETERANS (FOOT A 11 ET A
+                        7) POULE K</a>
                 </div>
-                <ul class="navigation__right">
-                    <li>
-                        <a href="/partenaires/" class="navigation__link">partenaires</a>
-                    </li>
-                    <li>
-                        <a href="/documents/" class="navigation__link">documents</a>
-                    </li>
-                    <!-- <li>
+            </li>
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Formation</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/u19" class="submenu__link--sub">U19 R1</a>
+                    <a href="/equipes/u18" class="submenu__link--sub">U18 D1</a>
+                    <a href="/equipes/u16" class="submenu__link--sub">U16 D1</a>
+                </div>
+            </li>
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Initiation</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/initiation/u9u10u11" class="submenu__link--sub">U9 - U10 - U11</a>
+                </div>
+            </li>
+            <a class="dropdown__link" href="/equipes/arbitres">Les arbitres</a>
+        </div>
+        </button>
+        </li>
+        <li>
+            <a href="/actualites/" class="navigation__link">Actualites</a>
+        </li>
+        <li>
+            <a href="/convocations/" class="navigation__link">Convocations</a>
+        </li>
+        </ul>
+        <div class="navigation__logo">
+            <a href="/"><img src="./assets/LogoESPCDB.svg" alt="Logo Espérance Chartres de Bretagne Football"></a>
+        </div>
+        <ul class="navigation__right">
+            <li>
+                <a href="/partenaires/" class="navigation__link">partenaires</a>
+            </li>
+            <li>
+                <a href="/documents/" class="navigation__link">documents</a>
+            </li>
+            <!-- <li>
                                 <a href="/boutique/" class="navigation__link">boutique</a>
                             </li> -->
-                    <li>
-                        <a href="/contact/" class="navigation__link">contact</a>
-                    </li>
-                </ul>
-            </div>
+            <li>
+                <a href="/contact/" class="navigation__link">contact</a>
+            </li>
+        </ul>
+        </div>
         </div>
     </nav>
     <main id="main">
@@ -69,7 +120,7 @@
                         <h1 class="home__hero__title" data-animation="title">Espérance Chartres de bretagne
                             football</h1>
                         <div class="home__hero__wave">
-                            <img src="./assets/wave.svg" />
+                            <img loading="lazy" src="./assets/wave.svg" />
                         </div>
                     </div>
                     <div class="home__hero__quickAccess">
@@ -105,19 +156,19 @@
                 <div class="home__hero__slider | js-hero__slider">
                     <div class="home__hero__sliderOverlay"></div>
                     <div class="home__hero__slideImage | js-slide__image">
-                        <img src="./assets/image1.jpg">
+                        <img loading="lazy" src="./assets/image1.jpg">
                     </div>
                     <div class="home__hero__slideImage | js-slide__image">
-                        <img src="./assets/image2.png">
+                        <img loading="lazy" src="./assets/image2.png">
                     </div>
                     <div class="home__hero__slideImage | js-slide__image">
-                        <img src="./assets/image3.jpg">
+                        <img loading="lazy" src="./assets/image3.jpg">
                     </div>
                     <div class="home__hero__slideImage | js-slide__image">
-                        <img src="./assets/image4.jpg">
+                        <img loading="lazy" src="./assets/image4.jpg">
                     </div>
                     <div class="home__hero__slideImage | js-slide__image">
-                        <img src="./assets/image5.jpg">
+                        <img loading="lazy" src="./assets/image5.jpg">
                     </div>
                 </div>
                 <div class="home__hero__background"></div>
@@ -127,23 +178,18 @@
                     <div class="home__news__titleContainer">
                         <h1 class="home__news__title" data-animation="title">Nos dernières actualites</h1>
                         <div class="home__news__circle">
-                            <img src="./assets/circle_big.svg" />
+                            <img loading="lazy" src="./assets/circle_big.svg" />
                         </div>
                     </div>
-                    <div class="home__news__controlsContainer">
-                        <button class="home__news__slider--prev | js-news__control--prev">
-                            <img src="./assets/arrow-prev.svg" />
-                        </button>
-                        <button class="home__news__slider--next | js-news__control--next">
-                            <img src="./assets/arrow-prev.svg" />
-                        </button>
-                    </div>
+                    <p class="home__news__legend">
+                        glisser-deposer pour explorer
+                    </p>
                 </div>
                 <div class="home__news__slider | js-news__slider">
                     <div class="home__news__sliderInner | js-news__sliderInner">
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage">
                             </div>
                             <div class="home__news__textContainer">
@@ -157,11 +203,13 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news-2.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news-2.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage ">
                             </div>
                             <div class="home__news__textContainer">
@@ -175,11 +223,13 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage">
                             </div>
                             <div class="home__news__textContainer">
@@ -193,11 +243,13 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news-2.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news-2.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage ">
                             </div>
                             <div class="home__news__textContainer">
@@ -211,11 +263,13 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage ">
                             </div>
                             <div class="home__news__textContainer">
@@ -229,11 +283,13 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                         <div class="home__news__slide | js-news__slide">
                             <div class="home__news__imageContainer">
-                                <img src="./assets/image-news.png" alt="Image News"
+                                <img loading="lazy" src="./assets/image-news.png" alt="Image News"
                                     class="home__news__slideImage | js-news__slideImage ">
                             </div>
                             <div class="home__news__textContainer">
@@ -247,6 +303,8 @@
                                     joueurs bien évidemment,
                                     mais aussi de ses éducateurs...
                                 </p>
+                                <a href="/actualites/actu-template-2" class="home__news__link cta cta__icon">Voir
+                                    plus</a>
                             </div>
                         </div>
                     </div>
@@ -268,9 +326,9 @@
                     </h2>
                     <div class="home__history__bottomBlock">
                         <div class="home__history__arrow">
-                            <img src="./assets/arrow_curved.svg" />
+                            <img loading="lazy" src="./assets/arrow_curved.svg" />
                         </div>
-                        <a href="/actualites" class="home__history__button">
+                        <a href="/club/historique" class="home__history__button">
                             <div class="cta__button">
                                 <div class="cta cta__icon">
                                     L'histoire du club
@@ -281,7 +339,7 @@
                 </div>
                 <div class="home__history__overlay"></div>
                 <div class="home__history__backgroundContainer">
-                    <img src="./assets/image-history.png" alt="" class="home__history__background">
+                    <img loading="lazy" src="./assets/image-history.png" alt="" class="home__history__background">
                 </div>
             </section>
             <section class="home__teams">
@@ -303,7 +361,8 @@
                     <div class="home__teams__row">
                         <div class="home__teams__perf">
                             <div class="home__teams__perfImageContainer">
-                                <img src="./assets/image-team-perf.png" alt="" class="home__teams__perfImage">
+                                <img loading="lazy" src="./assets/image-team-perf.png" alt=""
+                                    class="home__teams__perfImage">
                             </div>
                             <div class="home__teams__perfContent">
                                 <h3 class="home__teams__perfTitle">/ Performance</h3>
@@ -311,14 +370,15 @@
                                     adipiscing elit. Dolor
                                     auctor
                                     pretium nibh sed. Pulvinar aliquam in eu elementum cursus ut...</p>
-                                <a href="/equipes/performance" class="home__teams__perfButton cta cta__icon">En
+                                <a href="/equipes/seniors1" class="home__teams__perfButton cta cta__icon">En
                                     savoir plus</a>
                             </div>
                         </div>
                         <div class="home__teams__form">
                             <img src="./assets/cross.svg" alt="cross" class="home__teams__formCross">
                             <div class="home__teams__formImageContainer">
-                                <img src="./assets/image-team-form.png" alt="" class="home__teams__formImage">
+                                <img loading="lazy" src="./assets/image-team-form.png" alt=""
+                                    class="home__teams__formImage">
                             </div>
                             <div class="home__teams__formContent">
                                 <h3 class="home__teams__formTitle">/ Formation</h3>
@@ -326,7 +386,7 @@
                                     adipiscing elit. Dolor
                                     auctor
                                     pretium nibh sed. Pulvinar aliquam in eu elementum cursus ut...</p>
-                                <a href="/equipes/formation" class="home__teams__formButton cta cta__icon">En
+                                <a href="/equipes/u19" class="home__teams__formButton cta cta__icon">En
                                     savoir plus</a>
                             </div>
                         </div>
@@ -335,7 +395,8 @@
                         <div class="home__teams__init">
                             <img src="./assets/arrow-down.svg" alt="cross" class="home__teams__initArrow">
                             <div class="home__teams__initImageContainer">
-                                <img src="./assets/image-team-init.png" alt="" class="home__teams__initImage">
+                                <img loading="lazy" src="./assets/image-team-init.png" alt=""
+                                    class="home__teams__initImage">
                             </div>
                             <div class="home__teams__initContent">
                                 <h3 class="home__teams__initTitle">/ Initiation</h3>
@@ -343,7 +404,7 @@
                                     adipiscing elit. Dolor
                                     auctor
                                     pretium nibh sed. Pulvinar aliquam in eu elementum cursus ut...</p>
-                                <a href="/equipes/initiation" class="home__teams__initButton cta cta__icon">En
+                                <a href="/equipes/u9u10u11" class="home__teams__initButton cta cta__icon">En
                                     savoir plus</a>
                             </div>
                         </div>
@@ -358,7 +419,7 @@
                     Nous recrutons actuellement au sein du club ! Alors rejoins-nous !
                 </h2>
                 <div class="home__recruit__imageContainer">
-                    <img src="./assets/image-recruit.png" alt="" class="home__recruit__image">
+                    <img loading="lazy" src="./assets/image-recruit.png" alt="" class="home__recruit__image">
                 </div>
                 <div class="home__recruit__content l-container">
                     <p class="home__recruit__text">
@@ -413,9 +474,6 @@
                             </div>
                         </ul>
                     </ul>
-                    <button class="footer__backTop">
-                        <img src="./assets/arrow_up.svg" />
-                    </button>
                 </div>
                 <div class="footer__bottom l-container">
                     <div class="footer__line"></div>

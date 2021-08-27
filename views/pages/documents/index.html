@@ -15,44 +15,95 @@
 </head>
 
 <body>
-
+    <!-- PRELOADER -->
+    <div class="preloader"></div>
     <nav class="navigation">
         <div class="navigation__mobile"></div>
         <div class="navigation__desktop">
             <div class="navigation__container l-container">
                 <ul class="navigation__left">
-                    <li>
-                        <a href="#" class="navigation__link">Club</a>
+                    <li class="navigation__dropdown">
+                        <button class="navigation__link">Club<svg class="navigation__link__caret" width="8" height="6"
+                                viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.75L4 4.25L7 0.75" stroke="#FAFAFA" />
+                            </svg>
+                            <div class="navigation__dropdown__content">
+                                <a class="dropdown__link" href="/club/historique">Historique</a>
+                                <a class="dropdown__link" href="/club/stade">Stade Remy Bellanger</a>
+                    <li class="dropdown__link has-sub">
+                        <a class="submenu" href="#">Staff</a>
+                        <div class="dropdown__sub">
+                            <a href="/club/conseil" class="submenu__link--sub">Conseil d'administration</a>
+                            <a href="/club/benevoles" class="submenu__link--sub">Benevoles</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#" class="navigation__link">Equipes</a>
-                    </li>
-                    <li>
-                        <a href="/actualites/" class="navigation__link">Actualites</a>
-                    </li>
-                    <li>
-                        <a href="/convocations/" class="navigation__link">Convocations</a>
-                    </li>
-                </ul>
-                <div class="navigation__logo">
-                    <a href="/"><img src="../../../assets/LogoESPCDB.svg"
-                            alt="Logo Espérance Chartres de Bretagne Football"></a>
-                </div>
-                <ul class="navigation__right">
-                    <li>
-                        <a href="/partenaires/" class="navigation__link">partenaires</a>
-                    </li>
-                    <li>
-                        <a href="/documents/" class="navigation__link">documents</a>
-                    </li>
-                    <li>
-                        <a href="/boutique/" class="navigation__link">boutique</a>
-                    </li>
-                    <li>
-                        <a href="/contact/" class="navigation__link">contact</a>
-                    </li>
-                </ul>
             </div>
+            </button>
+            </li>
+            <li class="navigation__dropdown">
+                <button class="navigation__link">Equipes<svg class="navigation__link__caret" width="8" height="6"
+                        viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0.75L4 4.25L7 0.75" stroke="#FAFAFA" />
+                    </svg>
+                    <div class="navigation__dropdown__content">
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Performance</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/seniors1" class="submenu__link--sub">SENIORS 1 R1 - Groupe
+                        B</a>
+                    <a href="/equipes/seniors2" class="submenu__link--sub">SENIORS 2 D1 - Groupe
+                        E</a>
+                    <a href="/equipes/seniors3" class="submenu__link--sub">SENIORS 3 D2 - Groupe
+                        F</a>
+                    <a href="/equipes/seniors4" class="submenu__link--sub">SENIORS 4 D4 </a>
+                    <a href="/equipes/veterans" class="submenu__link--sub">VETERANS (FOOT A 11 ET A
+                        7) POULE K</a>
+                </div>
+            </li>
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Formation</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/u19" class="submenu__link--sub">U19 R1</a>
+                    <a href="/equipes/u18" class="submenu__link--sub">U18 D1</a>
+                    <a href="/equipes/u16" class="submenu__link--sub">U16 D1</a>
+                </div>
+            </li>
+            <li class="dropdown__link has-sub">
+                <a class="submenu" href="#">Initiation</a>
+                <div class="dropdown__sub">
+                    <a href="/equipes/initiation/u9u10u11" class="submenu__link--sub">U9 - U10 - U11</a>
+                </div>
+            </li>
+            <a class="dropdown__link" href="/equipes/arbitres">Les arbitres</a>
+        </div>
+        </button>
+        </li>
+        <li>
+            <a href="/actualites/" class="navigation__link">Actualites</a>
+        </li>
+        <li>
+            <a href="/convocations/" class="navigation__link">Convocations</a>
+        </li>
+        </ul>
+        <div class="navigation__logo">
+            <a href="/"><img src="../../../assets/LogoESPCDB.svg"
+                    alt="Logo Espérance Chartres de Bretagne Football"></a>
+        </div>
+        <ul class="navigation__right">
+            <li>
+                <a href="/partenaires/" class="navigation__link">partenaires</a>
+            </li>
+            <li>
+                <a href="/documents/" class="navigation__link">documents</a>
+            </li>
+            <!-- <li>
+                                <a href="/boutique/" class="navigation__link">boutique</a>
+                            </li> -->
+            <li>
+                <a href="/contact/" class="navigation__link">contact</a>
+            </li>
+        </ul>
+        </div>
         </div>
     </nav>
     <main id="main">
@@ -68,7 +119,8 @@
                 </div>
                 <div class="documents__hero__background">
                     <div class="documents__hero__overlay"></div>
-                    <img src="../../../assets/image-doc-hero.png" alt="" class="documents__hero__backgroundImage">
+                    <img loading="lazy" src="../../../assets/image-doc-hero.png" alt=""
+                        class="documents__hero__backgroundImage">
                 </div>
             </section>
             <section class="documents__intro l-container">

@@ -1,0 +1,5 @@
+.equipes__background {
+    @extend %cover;
+    background-color: $color-black;
+    z-index: -1;
+}

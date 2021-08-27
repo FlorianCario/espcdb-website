@@ -1,0 +1,29 @@
+.equipes__notes {
+    position: relative;
+}
+
+.equipes__notes__content {
+    padding:  19rem 0 21.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.equipes__notes__contentRight {
+    margin-left: 43.3rem;
+
+    @include media('<phone') {
+        margin-left: 0;
+        margin-top: 2.4rem;
+    }
+}
+
+.equipes__notes__subtitle {
+    @extend %description-12;
+    color: $color-beige;
+}
+
+.equipes__notes__text {
+    max-width: 31rem;
+    color: $color-white;
+}
