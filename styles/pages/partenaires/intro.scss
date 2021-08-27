@@ -1,0 +1,50 @@
+.partenaires__intro {
+    position: relative;
+    padding: 15rem 0 20rem 0;
+
+    @include media('<phone') {
+        padding: 5rem 0 10rem 0;
+    }
+}
+
+.partenaires__intro__filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media('<phone') {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.partenaires__intro__title {
+    @extend %description-14;
+    color: $color-beige;
+
+    @include media('<phone') {
+        margin-bottom: 1rem;
+    }
+}
+
+.partenaires__intro__cta {
+    margin-left: 10rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media('<phone') {
+        margin-left: 0rem;
+    }
+}
+
+.partenaires__intro__select {
+    width: 21.8rem;
+    margin-left: 10rem;
+
+    @include media('<phone') {
+        margin-left: 0rem;
+        margin-bottom: 3rem;
+    }
+}
